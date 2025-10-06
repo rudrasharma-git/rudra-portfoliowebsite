@@ -1,0 +1,68 @@
+import { ArrowRight } from "lucide-react";
+
+const Hero = () => {
+  return (
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center bg-background px-6 pt-20"
+    >
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Mobile: Image First */}
+          <div className="order-1 md:order-2 flex justify-center animate-fade-in">
+            <div className="relative w-full max-w-md aspect-square">
+              {/* IMPORTANT: Replace this src with your actual image path */}
+              <img
+                src="/placeholder.svg"
+                alt="Rudra Sharma"
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-secondary/20 to-transparent"></div>
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="order-2 md:order-1 space-y-6 animate-slide-in-left">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none">
+              RUDRA
+              <br />
+              SHARMA
+            </h1>
+
+            <h2 className="text-xl md:text-2xl font-medium tracking-wide text-muted-foreground">
+              ROBOTICS AND AI ENGINEER
+            </h2>
+
+            <p className="text-sm md:text-base tracking-wide leading-relaxed text-foreground/80 max-w-xl uppercase">
+              I am a Robotics and AI engineer, and I create intelligent systems
+              that blend machine learning, robotic control, and automation. With
+              multidisciplinary knowledge, I provide solutions with urgency,
+              efficiency, and creativity.
+            </p>
+
+            {/* CTA */}
+            <div className="pt-4">
+              <div className="inline-flex items-center gap-3 group">
+                <span className="text-sm font-semibold tracking-wider">
+                  AVAILABLE FOR WORK
+                </span>
+                <ArrowRight
+                  size={20}
+                  className="group-hover:translate-x-2 transition-transform duration-300"
+                />
+                <a
+                  href="mailto:rudrasharma1759@gmail.com"
+                  className="text-sm font-medium text-secondary hover:underline"
+                >
+                  rudrasharma1759@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
