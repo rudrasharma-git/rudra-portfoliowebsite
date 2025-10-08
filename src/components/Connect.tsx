@@ -4,16 +4,42 @@ const Connect = () => {
   return (
     <section
       id="connect"
-      className="min-h-screen bg-primary text-primary-foreground py-24 px-6 flex items-center"
+      className="min-h-screen bg-background text-foreground py-24 px-6 flex items-center justify-center"
     >
-      <div className="container mx-auto max-w-7xl">
-        <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
+      <div className="container mx-auto max-w-3xl">
+        <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in text-center">
           CONNECT
         </h2>
 
-        <div className="space-y-12 animate-slide-in-left">
+        <div className="space-y-12 animate-slide-in-left text-center">
+          {/* Email */}
+          <div className="space-y-2">
+            <p className="text-sm text-foreground/70 tracking-wide">
+              EMAIL
+            </p>
+            <a
+              href="mailto:rudrasharma1759@gmail.com"
+              className="text-2xl md:text-3xl font-medium hover:text-secondary transition-colors break-all block"
+            >
+              rudrasharma1759@gmail.com
+            </a>
+          </div>
+
+          {/* Phone Number */}
+          <div className="space-y-2">
+            <p className="text-sm text-foreground/70 tracking-wide">
+              PHONE
+            </p>
+            <a
+              href="tel:+919990049238"
+              className="text-4xl md:text-6xl font-bold hover:text-secondary transition-colors block"
+            >
+              +91 99900 49238
+            </a>
+          </div>
+
           {/* Social Links */}
-          <div className="flex gap-6">
+          <div className="flex gap-6 justify-center">
             <a
               href="https://linkedin.com/in/yourprofile"
               target="_blank"
@@ -45,35 +71,9 @@ const Connect = () => {
             </a>
           </div>
 
-          {/* Phone Number */}
-          <div className="space-y-2">
-            <p className="text-sm text-primary-foreground/70 tracking-wide">
-              PHONE
-            </p>
-            <a
-              href="tel:+919990049238"
-              className="text-4xl md:text-6xl font-bold hover:text-secondary transition-colors"
-            >
-              +91 99900 49238
-            </a>
-          </div>
-
-          {/* Email */}
-          <div className="space-y-2">
-            <p className="text-sm text-primary-foreground/70 tracking-wide">
-              EMAIL
-            </p>
-            <a
-              href="mailto:rudrasharma1759@gmail.com"
-              className="text-2xl md:text-3xl font-medium hover:text-secondary transition-colors break-all"
-            >
-              rudrasharma1759@gmail.com
-            </a>
-          </div>
-
           {/* Quote */}
           <div className="pt-12">
-            <p className="text-xl md:text-2xl font-light italic text-primary-foreground/80 tracking-wide uppercase">
+            <p className="text-xl md:text-2xl font-light italic text-foreground/80 tracking-wide uppercase">
               "Every great story has a beginning."
             </p>
           </div>

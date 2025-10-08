@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ChevronRight, ChevronLeft, ArrowRight } from "lucide-react";
+import { useState, useRef } from "react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
@@ -71,172 +71,174 @@ const projectsData: Project[] = [
 ];
 
 const Projects = () => {
-  const [activeProject, setActiveProject] = useState(0);
-  const [activeImage, setActiveImage] = useState(0);
+  const [activeImageIndices, setActiveImageIndices] = useState<{ [key: number]: number }>({});
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
-  const nextProject = () => {
-    setActiveProject((prev) => (prev + 1) % projectsData.length);
-    setActiveImage(0);
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = scrollContainerRef.current.clientWidth;
+      scrollContainerRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
   };
 
-  const prevProject = () => {
-    setActiveProject((prev) => (prev - 1 + projectsData.length) % projectsData.length);
-    setActiveImage(0);
+  const nextImage = (projectId: number, imageCount: number) => {
+    setActiveImageIndices((prev) => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) + 1) % imageCount,
+    }));
   };
 
-  const nextImage = () => {
-    setActiveImage(
-      (prev) => (prev + 1) % projectsData[activeProject].images.length
-    );
-  };
-
-  const prevImage = () => {
-    setActiveImage(
-      (prev) =>
-        (prev - 1 + projectsData[activeProject].images.length) %
-        projectsData[activeProject].images.length
-    );
+  const prevImage = (projectId: number, imageCount: number) => {
+    setActiveImageIndices((prev) => ({
+      ...prev,
+      [projectId]: ((prev[projectId] || 0) - 1 + imageCount) % imageCount,
+    }));
   };
 
   const handleReadMore = (id: number) => {
     navigate(`/project/${id}`);
   };
 
-  const currentProject = projectsData[activeProject];
-
   return (
     <section
       id="projects"
-      className="min-h-screen bg-background py-24 px-6 relative overflow-hidden"
+      className="min-h-screen bg-primary text-primary-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
-          PROJECTS
-        </h2>
-
-        {/* Horizontal Scrolling Container */}
-        <div className="relative">
-          {/* Project Card */}
-          <div className="bg-card rounded-2xl p-8 md:p-12 shadow-lg animate-scale-in">
-            {/* Title */}
-            <h3 className="text-3xl md:text-4xl font-bold mb-8">
-              {currentProject.title}
-            </h3>
-
-            {/* Image Carousel */}
-            <div className="relative mb-8 aspect-video bg-muted rounded-xl overflow-hidden">
-              <img
-                src={currentProject.images[activeImage]}
-                alt={`${currentProject.title} - Image ${activeImage + 1}`}
-                className="w-full h-full object-cover"
-              />
-
-              {/* Image Navigation */}
-              {currentProject.images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/80 text-primary-foreground p-2 rounded-full hover:bg-primary transition-colors"
-                  >
-                    <ChevronLeft size={24} />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/80 text-primary-foreground p-2 rounded-full hover:bg-primary transition-colors"
-                  >
-                    <ChevronRight size={24} />
-                  </button>
-
-                  {/* Image Indicators */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                    {currentProject.images.map((_, idx) => (
-                      <div
-                        key={idx}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          idx === activeImage
-                            ? "bg-secondary w-8"
-                            : "bg-primary-foreground/50"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            {/* Description */}
-            <p className="text-base md:text-lg leading-relaxed text-foreground/80 mb-6">
-              {currentProject.description}
-            </p>
-
-            {/* Skills */}
-            <div className="mb-8">
-              <h4 className="text-sm font-semibold mb-3 text-muted-foreground">
-                TECHNOLOGIES & SKILLS
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {currentProject.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="px-4 py-2 bg-secondary/10 text-secondary text-sm font-medium rounded-full border border-secondary/30"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Read More Button */}
-            <Button
-              onClick={() => handleReadMore(currentProject.id)}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-base font-semibold"
-            >
-              READ MORE
-            </Button>
-          </div>
-
-          {/* Project Navigation Arrows */}
-          <div className="flex justify-center items-center gap-4 mt-12">
+        {/* Header with Navigation */}
+        <div className="flex items-center justify-between mb-16">
+          <h2 className="text-5xl md:text-7xl font-bold animate-fade-in">
+            PROJECTS
+          </h2>
+          <div className="flex gap-3">
             <button
-              onClick={prevProject}
-              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+              onClick={() => scroll("left")}
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
+              aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
-
-            <div className="flex gap-2">
-              {projectsData.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setActiveProject(idx);
-                    setActiveImage(0);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    idx === activeProject
-                      ? "bg-secondary w-12"
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                  }`}
-                />
-              ))}
-            </div>
-
             <button
-              onClick={nextProject}
-              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors animate-bounce"
+              onClick={() => scroll("right")}
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
+              aria-label="Scroll right"
             >
               <ChevronRight size={28} />
             </button>
           </div>
+        </div>
 
-          {/* Scroll Hint */}
-          <div className="text-center mt-8 text-sm text-muted-foreground flex items-center justify-center gap-2">
-            <span>Scroll to see more projects</span>
-            <ArrowRight className="animate-pulse" size={16} />
-          </div>
+        {/* Horizontal Scrolling Container */}
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {projectsData.map((project) => {
+            const activeImage = activeImageIndices[project.id] || 0;
+            return (
+              <div
+                key={project.id}
+                className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
+              >
+                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
+                  {/* Title */}
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 line-clamp-2">
+                    {project.title}
+                  </h3>
+
+                  {/* Image Carousel */}
+                  <div className="relative mb-4 aspect-video bg-muted rounded-xl overflow-hidden">
+                    <img
+                      src={project.images[activeImage]}
+                      alt={`${project.title} - Image ${activeImage + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+
+                    {/* Image Navigation */}
+                    {project.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() => prevImage(project.id, project.images.length)}
+                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-primary/80 text-primary-foreground p-1.5 rounded-full hover:bg-primary transition-colors"
+                        >
+                          <ChevronLeft size={20} />
+                        </button>
+                        <button
+                          onClick={() => nextImage(project.id, project.images.length)}
+                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary/80 text-primary-foreground p-1.5 rounded-full hover:bg-primary transition-colors"
+                        >
+                          <ChevronRight size={20} />
+                        </button>
+
+                        {/* Image Indicators */}
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                          {project.images.map((_, idx) => (
+                            <div
+                              key={idx}
+                              className={`w-1.5 h-1.5 rounded-full transition-all ${
+                                idx === activeImage
+                                  ? "bg-secondary w-6"
+                                  : "bg-primary-foreground/50"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-sm leading-relaxed text-card-foreground/80 mb-4 line-clamp-3 flex-grow">
+                    {project.description}
+                  </p>
+
+                  {/* Skills */}
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold mb-2 text-muted-foreground">
+                      TECHNOLOGIES & SKILLS
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.skills.slice(0, 4).map((skill, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2.5 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full border border-secondary/30"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                      {project.skills.length > 4 && (
+                        <span className="px-2.5 py-1 text-xs text-muted-foreground">
+                          +{project.skills.length - 4} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Read More Button */}
+                  <Button
+                    onClick={() => handleReadMore(project.id)}
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                    size="sm"
+                  >
+                    READ MORE
+                  </Button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
+
+      <style>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };

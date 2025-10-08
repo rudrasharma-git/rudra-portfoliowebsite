@@ -93,20 +93,16 @@ const skillsData: SkillCategory[] = [
 ];
 
 const Skills = () => {
-  const [openCategories, setOpenCategories] = useState<number[]>([]);
+  const [openCategory, setOpenCategory] = useState<number | null>(null);
 
   const toggleCategory = (index: number) => {
-    if (openCategories.includes(index)) {
-      setOpenCategories(openCategories.filter((i) => i !== index));
-    } else {
-      setOpenCategories([...openCategories, index]);
-    }
+    setOpenCategory(openCategory === index ? null : index);
   };
 
   return (
     <section
       id="skills"
-      className="min-h-screen bg-background py-24 px-6"
+      className="min-h-screen bg-primary text-primary-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
@@ -118,8 +114,8 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-card rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl animate-scale-in ${
-                openCategories.includes(index)
+              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl animate-scale-in ${
+                openCategory === index
                   ? category.color === "secondary"
                     ? "border-secondary"
                     : "border-accent"
@@ -138,7 +134,7 @@ const Skills = () => {
                 </h3>
                 <ChevronDown
                   className={`transition-transform duration-300 ${
-                    openCategories.includes(index) ? "rotate-180" : ""
+                    openCategory === index ? "rotate-180" : ""
                   } ${category.color === "secondary" ? "text-secondary" : "text-accent"}`}
                   size={24}
                 />
@@ -146,7 +142,7 @@ const Skills = () => {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openCategories.includes(index)
+                  openCategory === index
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
@@ -175,8 +171,8 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-card rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
-                openCategories.includes(index)
+              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
+                openCategory === index
                   ? category.color === "secondary"
                     ? "border-secondary"
                     : "border-accent"
@@ -194,7 +190,7 @@ const Skills = () => {
                 </h3>
                 <ChevronDown
                   className={`transition-transform duration-300 ${
-                    openCategories.includes(index) ? "rotate-180" : ""
+                    openCategory === index ? "rotate-180" : ""
                   } ${category.color === "secondary" ? "text-secondary" : "text-accent"}`}
                   size={24}
                 />
@@ -202,7 +198,7 @@ const Skills = () => {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openCategories.includes(index)
+                  openCategory === index
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
