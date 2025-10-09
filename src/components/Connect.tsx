@@ -7,7 +7,7 @@ const Connect = () => {
       className="min-h-screen bg-background text-foreground py-24 px-6 flex items-center justify-center"
     >
       <div className="container mx-auto max-w-3xl">
-        <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
+        <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in text-center">
           CONNECT
         </h2>
 

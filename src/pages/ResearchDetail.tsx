@@ -2,7 +2,50 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { researchData } from "@/data/researchData";
+
+// This should match the data from Research.tsx
+const researchData = [
+  {
+    id: 1,
+    title: "Dynamic Analysis and Simulation of Double Parallelogram based MIS Robot",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    status: "Research Paper",
+    fullDescription: `
+      This research presents a comprehensive dynamic analysis and simulation framework for minimally invasive surgical robots employing double parallelogram mechanisms.
+      
+      Research objectives:
+      - Develop accurate dynamic models for surgical robots
+      - Optimize mechanism parameters for enhanced precision
+      - Validate simulation results with experimental data
+      
+      Methodology:
+      - Lagrangian formulation for dynamic equations
+      - MATLAB/Simulink for simulation and analysis
+      - Workspace characterization and force transmission analysis
+      
+      Key findings:
+      - Improved understanding of force transmission characteristics
+      - Optimized design parameters for reduced surgical forces
+      - Enhanced precision in surgical tool positioning
+      
+      [TODO: Add your detailed research information here]
+    `,
+    skills: ["Robotics", "Dynamic Analysis", "MATLAB", "Surgical Robotics", "Kinematics"],
+  },
+  {
+    id: 2,
+    title: "A novel RL based control strategy deployed for Soft Robots",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    status: "Research Paper",
+    fullDescription: `
+      Novel reinforcement learning control framework addressing the unique challenges of soft robotic systems.
+      
+      [TODO: Add your detailed research information here]
+    `,
+    skills: ["Reinforcement Learning", "Soft Robotics", "Control Systems", "AI", "Python"],
+  },
+  // Add other research items with full descriptions
+];
 
 const ResearchDetail = () => {
   const { id } = useParams();

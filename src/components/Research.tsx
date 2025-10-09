@@ -2,8 +2,63 @@ import { useState, useRef } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { researchData } from "@/data/researchData";
 
+interface ResearchItem {
+  id: number;
+  title: string;
+  images: string[];
+  description: string;
+  status: string;
+  skills: string[];
+}
+
+const researchData: ResearchItem[] = [
+  {
+    id: 1,
+    title: "Dynamic Analysis and Simulation of Double Parallelogram based MIS Robot",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Comprehensive dynamic modeling and simulation of minimally invasive surgical robot using double parallelogram mechanism. Analysis includes workspace characterization, force transmission, and optimization of kinematic parameters for enhanced surgical precision.",
+    status: "Research",
+    skills: ["Robotics", "Dynamic Analysis", "MATLAB", "Surgical Robotics", "Kinematics"],
+  },
+  {
+    id: 2,
+    title: "A novel RL based control strategy deployed for Soft Robots",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Developed innovative reinforcement learning control framework for soft robotic systems, addressing challenges of nonlinear dynamics and material compliance. Demonstrated superior adaptability compared to traditional control methods.",
+    status: "Research",
+    skills: ["Reinforcement Learning", "Soft Robotics", "Control Systems", "AI", "Python"],
+  },
+  {
+    id: 3,
+    title: "A comprehensive study on the RCM in MIS robots",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Extensive review of Remote Center of Motion (RCM) mechanisms in minimally invasive surgical robots. Comparative analysis of various RCM implementations, their advantages, limitations, and future research directions.",
+    status: "Review",
+    skills: ["Medical Robotics", "RCM Mechanisms", "Literature Review", "Surgical Systems"],
+  },
+  {
+    id: 4,
+    title: "Integration of 4D printing in Soft Robotics",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Investigates the potential of 4D printing technology in fabricating shape-morphing soft robotic components. Explores smart materials, stimuli-responsive designs, and applications in adaptive robotics.",
+    status: "Under Review - Next Materials Journal",
+    skills: ["4D Printing", "Soft Robotics", "Smart Materials", "Additive Manufacturing"],
+  },
+  {
+    id: 5,
+    title: "Design of Soft Robots - A Review",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Comprehensive survey of soft robot design methodologies, materials, fabrication techniques, and actuation mechanisms. Includes analysis of bio-inspired designs and emerging applications in healthcare and industry.",
+    status: "Review",
+    skills: ["Soft Robotics", "Design Principles", "Materials Science", "Bio-inspiration"],
+  },
+];
 
 const Research = () => {
   const [activeImageIndices, setActiveImageIndices] = useState<{ [key: number]: number }>({});
@@ -52,14 +107,14 @@ const Research = () => {
           <div className="flex gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
               aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
               aria-label="Scroll right"
             >
               <ChevronRight size={28} />
@@ -70,7 +125,7 @@ const Research = () => {
         {/* Horizontal Scrolling Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {researchData.map((research) => {

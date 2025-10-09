@@ -2,8 +2,73 @@ import { useState, useRef } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { projectsData } from "@/data/projectsData";
 
+interface Project {
+  id: number;
+  title: string;
+  images: string[];
+  description: string;
+  skills: string[];
+}
+
+const projectsData: Project[] = [
+  {
+    id: 1,
+    title: "Creating a LLM from scratch",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Developed a custom Large Language Model from the ground up, implementing transformer architecture, attention mechanisms, and tokenization strategies for natural language processing tasks.",
+    skills: ["Python", "PyTorch", "NLP", "Transformers", "Deep Learning"],
+  },
+  {
+    id: 2,
+    title: "Deploying various algorithms of path planning of mobile robot using ROS",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Implemented and compared multiple path planning algorithms including A*, RRT, and Dijkstra for autonomous mobile robot navigation in complex environments using ROS framework.",
+    skills: ["ROS", "C++", "Path Planning", "Algorithms", "Robotics"],
+  },
+  {
+    id: 3,
+    title: "SPM Design, Wiring, PLC programming and HMI deployment for a Automated Iron Testing Machine",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Designed and implemented complete automation solution for industrial iron testing equipment, including electrical design, PLC programming, and intuitive HMI interface for operators.",
+    skills: ["PLC Programming", "HMI", "Industrial Automation", "Electrical Design", "SCADA"],
+  },
+  {
+    id: 4,
+    title: "AGV Control and Comparison of performance of LiDAR vs Camera using ROS and its Libraries",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Conducted comprehensive analysis comparing LiDAR and camera-based navigation systems for Automated Guided Vehicles, evaluating accuracy, reliability, and computational efficiency.",
+    skills: ["ROS", "LiDAR", "Computer Vision", "AGV", "Sensor Fusion"],
+  },
+  {
+    id: 5,
+    title: "Robot Vision algorithm to detect and create the map of the entire floor",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Developed advanced vision algorithms for SLAM (Simultaneous Localization and Mapping) enabling robots to autonomously map and navigate indoor environments.",
+    skills: ["SLAM", "Computer Vision", "OpenCV", "Point Cloud Processing", "Mapping"],
+  },
+  {
+    id: 6,
+    title: "Factory Automation Simulation using FactoryIO",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Created detailed simulation of automated factory processes using FactoryIO, optimizing production workflows and validating control strategies before physical implementation.",
+    skills: ["FactoryIO", "Automation", "Simulation", "Process Control", "Industry 4.0"],
+  },
+  {
+    id: 7,
+    title: "Soft Robot Design and Workspace Analysis",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    description:
+      "Designed novel soft robotic manipulator with compliant actuators, performed kinematic analysis, and characterized workspace capabilities for delicate manipulation tasks.",
+    skills: ["Soft Robotics", "CAD Design", "Kinematics", "FEA", "MATLAB"],
+  },
+];
 
 const Projects = () => {
   const [activeImageIndices, setActiveImageIndices] = useState<{ [key: number]: number }>({});
@@ -52,14 +117,14 @@ const Projects = () => {
           <div className="flex gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
               aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors"
               aria-label="Scroll right"
             >
               <ChevronRight size={28} />
@@ -70,7 +135,7 @@ const Projects = () => {
         {/* Horizontal Scrolling Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {projectsData.map((project) => {
