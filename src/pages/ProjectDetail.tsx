@@ -2,59 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
-// This should match the data from Projects.tsx
-const projectsData = [
-  {
-    id: 1,
-    title: "Creating a LLM from scratch",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    fullDescription: `
-      This project involved building a Large Language Model from the ground up, implementing every component of the transformer architecture.
-      
-      Key achievements:
-      - Implemented multi-head self-attention mechanism
-      - Developed custom tokenization strategies
-      - Trained on a dataset of [X] million tokens
-      - Achieved [Y] perplexity on validation set
-      
-      Technologies deployed:
-      - PyTorch for neural network implementation
-      - Custom CUDA kernels for performance optimization
-      - Distributed training across multiple GPUs
-      - Advanced optimization techniques including gradient accumulation
-      
-      Challenges overcome:
-      - Memory optimization for large-scale training
-      - Preventing overfitting through regularization
-      - Implementing efficient attention mechanisms
-      
-      Results:
-      The model successfully generates coherent text and demonstrates understanding of context across multiple domains.
-      
-      [TODO: Add your detailed project information here]
-    `,
-    skills: ["Python", "PyTorch", "NLP", "Transformers", "Deep Learning", "CUDA"],
-  },
-  {
-    id: 2,
-    title: "Deploying various algorithms of path planning of mobile robot using ROS",
-    images: ["/placeholder.svg", "/placeholder.svg"],
-    fullDescription: `
-      Comprehensive implementation and comparison of multiple path planning algorithms for autonomous mobile robot navigation.
-      
-      Algorithms implemented:
-      - A* (A-star) pathfinding
-      - Rapidly-exploring Random Tree (RRT)
-      - Dijkstra's algorithm
-      - Dynamic Window Approach (DWA)
-      
-      [TODO: Add your detailed project information here]
-    `,
-    skills: ["ROS", "C++", "Path Planning", "Algorithms", "Robotics"],
-  },
-  // Add other projects with full descriptions
-];
+import { projectsData } from "@/data/projectsData";
 
 const ProjectDetail = () => {
   const { id } = useParams();
