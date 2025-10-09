@@ -15,11 +15,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "ABOUT", href: "#about" },
-    { name: "PROJECTS", href: "#projects" },
-    { name: "RESEARCH", href: "#research" },
-    { name: "SKILLS", href: "#skills" },
-    { name: "CONNECT", href: "#connect" },
+    { name: "[ ABOUT ]", href: "#about" },
+    { name: "[ PROJECTS ]", href: "#projects" },
+    { name: "[ RESEARCH ]", href: "#research" },
+    { name: "[ SKILLS ]", href: "#skills" },
+    { name: "[ CONNECT ]", href: "#connect" },
   ];
 
   const scrollToSection = (href: string) => {
