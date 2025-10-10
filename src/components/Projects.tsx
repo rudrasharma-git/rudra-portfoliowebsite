@@ -82,7 +82,7 @@ const Projects = () => {
               >
                 <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold mb-4 line-clamp-2">
+                  <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem]">
                     {project.title}
                   </h3>
 
@@ -137,8 +137,8 @@ const Projects = () => {
                     <h4 className="text-xs font-semibold mb-2 text-muted-foreground">
                       TECHNOLOGIES & SKILLS
                     </h4>
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.skills.slice(0, 4).map((skill, idx) => (
+                    <div className="flex flex-wrap gap-1.5 min-h-[4rem]">
+                      {project.skills.map((skill, idx) => (
                         <span
                           key={idx}
                           className="px-2.5 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full border border-secondary/30"
@@ -146,11 +146,6 @@ const Projects = () => {
                           {skill}
                         </span>
                       ))}
-                      {project.skills.length > 4 && (
-                        <span className="px-2.5 py-1 text-xs text-muted-foreground">
-                          +{project.skills.length - 4} more
-                        </span>
-                      )}
                     </div>
                   </div>
 

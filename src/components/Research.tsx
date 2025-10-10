@@ -41,7 +41,7 @@ const Research = () => {
   return (
     <section
       id="research"
-      className="min-h-screen bg-background text-foreground py-24 px-6"
+      className="min-h-screen bg-card text-card-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header with Navigation */}
@@ -89,7 +89,7 @@ const Research = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold mb-4 line-clamp-2">
+                  <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem]">
                     {research.title}
                   </h3>
 
@@ -144,8 +144,8 @@ const Research = () => {
                     <h4 className="text-xs font-semibold mb-2 text-muted-foreground">
                       RESEARCH AREAS & SKILLS
                     </h4>
-                    <div className="flex flex-wrap gap-1.5">
-                      {research.skills.slice(0, 4).map((skill, idx) => (
+                    <div className="flex flex-wrap gap-1.5 min-h-[4rem]">
+                      {research.skills.map((skill, idx) => (
                         <span
                           key={idx}
                           className="px-2.5 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full border border-secondary/30"
@@ -153,11 +153,6 @@ const Research = () => {
                           {skill}
                         </span>
                       ))}
-                      {research.skills.length > 4 && (
-                        <span className="px-2.5 py-1 text-xs text-muted-foreground">
-                          +{research.skills.length - 4} more
-                        </span>
-                      )}
                     </div>
                   </div>
 

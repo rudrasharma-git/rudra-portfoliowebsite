@@ -4,9 +4,9 @@ const Connect = () => {
   return (
     <section
       id="connect"
-      className="min-h-screen bg-background text-foreground py-24 px-6 flex items-center justify-center"
+      className="min-h-screen bg-card text-card-foreground py-24 px-6"
     >
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
           CONNECT
         </h2>
@@ -41,7 +41,7 @@ const Connect = () => {
           {/* Social Links */}
           <div className="flex gap-6 justify-center">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/rudra-sharma-3045992b1/"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -56,7 +56,7 @@ const Connect = () => {
             </a>
 
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/rudrasharma-git"
               target="_blank"
               rel="noopener noreferrer"
               className="group"

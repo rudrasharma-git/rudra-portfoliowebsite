@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-background text-foreground py-24 px-6"
+      className="min-h-screen bg-card text-card-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
@@ -15,8 +15,7 @@ const About = () => {
             ABOUT ME
           </h3>
           <p className="text-base leading-relaxed text-foreground/90 max-w-4xl">
-            {/* TODO: Add your personal description here */}
-            [Add a few compelling lines about yourself, your passion for robotics and AI, and what drives you in this field.]
+            Equipped with a multidisciplinary knowledge, combined with an understanding of business ethics and professional values. I take ownership of my work, deliver with urgency, and believe in improving not just the outcome, but also the environment it's built in. I'm adaptable, proactive, and ready to lead when needed, always striving to move teams and projects forward.
           </p>
         </div>
 
@@ -32,46 +31,40 @@ const About = () => {
               {/* College */}
               <div className="border-l-2 border-secondary pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  {/* TODO: Add your college name */}
-                  [College Name]
+                  University School of Automation & Robotics, GGSIPU EDC, Shahdara, Delhi
                 </h4>
                 <p className="text-sm text-foreground/70 mb-2">
-                  {/* TODO: Add degree and year */}
-                  [Degree] • [Year - Year]
+                  Automation and Robotics • 2021 - 2025
                 </p>
                 <p className="text-sm text-foreground/80 mb-3">
-                  {/* TODO: Add relevant curriculum */}
                   Key Curriculum:
                 </p>
                 <ul className="text-sm text-foreground/70 space-y-1 list-disc list-inside">
-                  <li>[Course 1]</li>
-                  <li>[Course 2]</li>
-                  <li>[Course 3]</li>
-                  <li>[Course 4]</li>
+                  <li>Robot Kinematics and Dynamics</li>
+                  <li>Mechanical Design</li>
+                  <li>PLC & SCADA</li>
+                  <li>Vision Systems (ROS)</li>
+                  <li>Computer Architecture</li>
                 </ul>
               </div>
 
               {/* 12th Grade */}
               <div className="border-l-2 border-secondary/50 pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  {/* TODO: Add school name */}
-                  [School Name - 12th]
+                  CRPF Public School, Rohini - 12th
                 </h4>
                 <p className="text-sm text-foreground/70">
-                  {/* TODO: Add details */}
-                  [Board] • [Year] • [Percentage/Grade]
+                  CBSE • 2020 • 85%
                 </p>
               </div>
 
               {/* 10th Grade */}
               <div className="border-l-2 border-secondary/50 pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  {/* TODO: Add school name */}
-                  [School Name - 10th]
+                  CRPF Public School, Rohini - 10th
                 </h4>
                 <p className="text-sm text-foreground/70">
-                  {/* TODO: Add details */}
-                  [Board] • [Year] • [Percentage/Grade]
+                  CBSE • 2018 • 91%
                 </p>
               </div>
             </div>
@@ -84,31 +77,18 @@ const About = () => {
             </h3>
 
             <div className="space-y-6">
-              {/* TODO: Add your experiences */}
               <div className="border-l-2 border-accent pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  [Job Title/Position]
+                  Process Automation Trainee
                 </h4>
                 <p className="text-sm text-foreground/70 mb-3">
-                  [Company Name] • [Duration]
+                  AARGEE Automation and Control, Mohali • 1 Month
                 </p>
                 <ul className="text-sm text-foreground/80 space-y-2 list-disc list-inside">
-                  <li>[Key responsibility or achievement 1]</li>
-                  <li>[Key responsibility or achievement 2]</li>
-                  <li>[Key responsibility or achievement 3]</li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-accent pl-6">
-                <h4 className="text-lg font-semibold mb-2">
-                  [Job Title/Position]
-                </h4>
-                <p className="text-sm text-foreground/70 mb-3">
-                  [Company Name] • [Duration]
-                </p>
-                <ul className="text-sm text-foreground/80 space-y-2 list-disc list-inside">
-                  <li>[Key responsibility or achievement 1]</li>
-                  <li>[Key responsibility or achievement 2]</li>
+                  <li>PLC programming</li>
+                  <li>Control panel assembly</li>
+                  <li>Robot programming and simulation</li>
+                  <li>Automating special-purpose machines</li>
                 </ul>
               </div>
             </div>
