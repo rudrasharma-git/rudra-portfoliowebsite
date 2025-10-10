@@ -41,7 +41,7 @@ const Research = () => {
   return (
     <section
       id="research"
-      className="min-h-screen bg-card text-card-foreground py-24 px-6"
+      className="min-h-screen bg-primary text-primary-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header with Navigation */}

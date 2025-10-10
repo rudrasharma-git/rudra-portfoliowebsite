@@ -34,7 +34,7 @@ const Navigation = () => {
     <>
       {/* Desktop & Mobile Navigation */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary text-primary-foreground ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-card text-card-foreground ${
           scrolled ? "shadow-md" : ""
         }`}
       >
@@ -84,7 +84,7 @@ const Navigation = () => {
         }`}
       >
         <div
-          className={`absolute inset-0 bg-primary transition-transform duration-500 ${
+          className={`absolute inset-0 bg-card transition-transform duration-500 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -93,7 +93,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-3xl font-bold text-primary-foreground hover:text-secondary transition-colors duration-300"
+                className="text-3xl font-bold text-card-foreground hover:text-secondary transition-colors duration-300"
                 style={{
                   animationDelay: `${index * 0.1}s`,
                   animation: isOpen ? "fade-in 0.5s ease-out forwards" : "none",
@@ -104,7 +104,7 @@ const Navigation = () => {
             ))}
             
             {/* Copyright in Mobile Menu */}
-            <p className="absolute bottom-8 text-xs text-primary-foreground/60 text-center px-6">
+            <p className="absolute bottom-8 text-xs text-card-foreground/60 text-center px-6">
               Copyright © 2025. All Rights Reserved.
             </p>
           </div>
