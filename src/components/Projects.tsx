@@ -80,7 +80,7 @@ const Projects = () => {
                 key={project.id}
                 className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
               >
-                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col border border-border">
+                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
                   {/* Title */}
                   <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem]">
                     {project.title}

@@ -80,7 +80,7 @@ const Research = () => {
                 key={research.id}
                 className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
               >
-                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col border border-border">
+                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30">

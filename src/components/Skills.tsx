@@ -114,7 +114,7 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl animate-scale-in ${
+              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl animate-scale-in ${
                 openCategory === index
                   ? category.color === "secondary"
                     ? "border-secondary"
@@ -171,7 +171,7 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
+              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
                 openCategory === index
                   ? category.color === "secondary"
                     ? "border-secondary"
