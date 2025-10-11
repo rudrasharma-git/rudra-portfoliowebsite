@@ -52,14 +52,14 @@ const Projects = () => {
           <div className="flex gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll right"
             >
               <ChevronRight size={28} />
@@ -68,19 +68,19 @@ const Projects = () => {
         </div>
 
         {/* Horizontal Scrolling Container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {projectsData.map((project) => {
-            const activeImage = activeImageIndices[project.id] || 0;
-            return (
-              <div
-                key={project.id}
-                className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
-              >
-                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {projectsData.map((project) => {
+              const activeImage = activeImageIndices[project.id] || 0;
+              return (
+                <div
+                  key={project.id}
+                  className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
+                >
+                  <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-secondary/50 transition-all h-full flex flex-col">
                   {/* Title */}
                   <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem]">
                     {project.title}

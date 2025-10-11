@@ -114,12 +114,12 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 hover:shadow-xl animate-scale-in ${
+              className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 transition-all duration-300 hover:shadow-glow animate-scale-in ${
                 openCategory === index
                   ? category.color === "secondary"
-                    ? "border-secondary"
-                    : "border-accent"
-                  : "border-transparent"
+                    ? "border-secondary shadow-glow"
+                    : "border-accent shadow-glow"
+                  : "border-border hover:border-secondary/30"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -171,12 +171,12 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={index}
-              className={`bg-card text-card-foreground rounded-2xl p-6 shadow-lg border-2 transition-all duration-300 ${
+              className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 transition-all duration-300 ${
                 openCategory === index
                   ? category.color === "secondary"
-                    ? "border-secondary"
-                    : "border-accent"
-                  : "border-transparent"
+                    ? "border-secondary shadow-glow"
+                    : "border-accent shadow-glow"
+                  : "border-border hover:border-secondary/30"
               }`}
             >
               <button

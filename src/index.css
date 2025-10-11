@@ -9,25 +9,25 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Modern Professional Portfolio Color Scheme - Dark First */
-    --background: 220 60% 10%;
+    --background: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 220 40% 15%;
+    --card: 0 0% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 40% 15%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    /* Deep Navy Primary */
-    --primary: 0 0% 98%;
-    --primary-foreground: 220 60% 10%;
+    /* Dark primary - black with grey tint */
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
 
     /* Teal Accent */
     --secondary: 190 100% 50%;
-    --secondary-foreground: 220 60% 10%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 220 40% 20%;
-    --muted-foreground: 220 20% 70%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
     /* Warm Orange Accent */
     --accent: 15 100% 60%;
@@ -36,25 +36,26 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 40% 20%;
-    --input: 220 40% 20%;
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
     --ring: 190 100% 50%;
 
     --radius: 0.75rem;
 
     /* Section Alternating Colors */
-    --section-light: 220 60% 10%;
-    --section-dark: 0 0% 98%;
-    --section-accent: 220 40% 15%;
+    --section-light: 0 0% 10%;
+    --section-dark: 0 0% 96%;
+    --section-accent: 0 0% 12%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 60% 10%) 0%, hsl(220 40% 15%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 100% 45%) 100%);
     --gradient-warm: linear-gradient(135deg, hsl(15 100% 60%) 0%, hsl(25 100% 55%) 100%);
 
     /* Shadows */
-    --shadow-smooth: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.15);
+    --shadow-smooth: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(0, 200, 255, 0.3);
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,32 +63,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 98%;
-    --foreground: 220 40% 10%;
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 40% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 10%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 220 60% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 190 100% 50%;
-    --secondary-foreground: 220 60% 10%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 20% 40%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 15 100% 60%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 90%;
-    --input: 220 20% 90%;
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
     --ring: 190 100% 50%;
   }
 }

@@ -52,14 +52,14 @@ const Research = () => {
           <div className="flex gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-card/90 transition-colors animate-bounce"
+              className="p-3 bg-card text-card-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll right"
             >
               <ChevronRight size={28} />
@@ -68,19 +68,19 @@ const Research = () => {
         </div>
 
         {/* Horizontal Scrolling Container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {researchData.map((research) => {
-            const activeImage = activeImageIndices[research.id] || 0;
-            return (
-              <div
-                key={research.id}
-                className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
-              >
-                <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-lg h-full flex flex-col">
+          <div
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {researchData.map((research) => {
+              const activeImage = activeImageIndices[research.id] || 0;
+              return (
+                <div
+                  key={research.id}
+                  className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
+                >
+                  <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-accent/50 transition-all h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30">
