@@ -41,7 +41,7 @@ const Research = () => {
   return (
     <section
       id="research"
-      className="min-h-screen bg-primary text-primary-foreground py-24 px-6"
+      className="min-h-screen bg-card text-card-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header with Navigation */}
@@ -52,14 +52,14 @@ const Research = () => {
           <div className="flex gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll left"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-card text-card-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll right"
             >
               <ChevronRight size={28} />
@@ -80,7 +80,7 @@ const Research = () => {
                   key={research.id}
                   className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
                 >
-                  <div className="bg-card text-card-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-accent/50 transition-all h-full flex flex-col">
+                  <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-accent/50 transition-all h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30">
@@ -135,7 +135,7 @@ const Research = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-card-foreground/80 mb-4 line-clamp-3 flex-grow">
+                  <p className="text-sm leading-relaxed text-primary-foreground/80 mb-4 line-clamp-3 flex-grow">
                     {research.description}
                   </p>
 
@@ -159,7 +159,7 @@ const Research = () => {
                   {/* Read More Button */}
                   <Button
                     onClick={() => handleReadMore(research.id)}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
                     size="sm"
                   >
                     READ MORE

@@ -128,7 +128,7 @@ const Projects = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-card-foreground/80 mb-4 line-clamp-3 flex-grow">
+                  <p className="text-sm leading-relaxed text-primary-foreground/80 mb-4 line-clamp-3 flex-grow">
                     {project.description}
                   </p>
 
@@ -152,7 +152,7 @@ const Projects = () => {
                   {/* Read More Button */}
                   <Button
                     onClick={() => handleReadMore(project.id)}
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
                     size="sm"
                   >
                     READ MORE

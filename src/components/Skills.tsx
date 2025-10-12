@@ -93,10 +93,14 @@ const skillsData: SkillCategory[] = [
 ];
 
 const Skills = () => {
-  const [openCategory, setOpenCategory] = useState<number | null>(null);
+  const [openCategories, setOpenCategories] = useState<number[]>([]);
 
   const toggleCategory = (index: number) => {
-    setOpenCategory(openCategory === index ? null : index);
+    setOpenCategories(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
   };
 
   return (
@@ -115,7 +119,7 @@ const Skills = () => {
             <div
               key={index}
               className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 transition-all duration-300 hover:shadow-glow animate-scale-in ${
-                openCategory === index
+                openCategories.includes(index)
                   ? category.color === "secondary"
                     ? "border-secondary shadow-glow"
                     : "border-accent shadow-glow"
@@ -134,7 +138,7 @@ const Skills = () => {
                 </h3>
                 <ChevronDown
                   className={`transition-transform duration-300 ${
-                    openCategory === index ? "rotate-180" : ""
+                    openCategories.includes(index) ? "rotate-180" : ""
                   } ${category.color === "secondary" ? "text-secondary" : "text-accent"}`}
                   size={24}
                 />
@@ -142,7 +146,7 @@ const Skills = () => {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openCategory === index
+                  openCategories.includes(index)
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
@@ -172,7 +176,7 @@ const Skills = () => {
             <div
               key={index}
               className={`bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 transition-all duration-300 ${
-                openCategory === index
+                openCategories.includes(index)
                   ? category.color === "secondary"
                     ? "border-secondary shadow-glow"
                     : "border-accent shadow-glow"
@@ -190,7 +194,7 @@ const Skills = () => {
                 </h3>
                 <ChevronDown
                   className={`transition-transform duration-300 ${
-                    openCategory === index ? "rotate-180" : ""
+                    openCategories.includes(index) ? "rotate-180" : ""
                   } ${category.color === "secondary" ? "text-secondary" : "text-accent"}`}
                   size={24}
                 />
@@ -198,7 +202,7 @@ const Skills = () => {
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openCategory === index
+                  openCategories.includes(index)
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`}
