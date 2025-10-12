@@ -13,7 +13,7 @@ const Hero = () => {
             <div className="relative w-full max-w-md aspect-square">
               {/* IMPORTANT: Replace this src with your actual image path */}
               <img
-                src="/placeholder.svg"
+                src="/images/profile.png"
                 alt="Rudra Sharma"
                 className="w-full h-full object-cover rounded-2xl shadow-lg"
               />
