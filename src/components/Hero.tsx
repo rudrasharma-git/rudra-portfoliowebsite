@@ -10,14 +10,14 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Mobile: Image First */}
           <div className="order-1 md:order-2 flex justify-center animate-fade-in">
-            <div className="relative w-full max-w-md aspect-square">
+            <div className="relative w-full max-w-md aspect-rectangle">
               {/* IMPORTANT: Replace this src with your actual image path */}
               <img
                 src="/images/profile.png"
                 alt="Rudra Sharma"
                 className="w-full h-full object-cover rounded-2xl shadow-lg"
               />
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-secondary/20 to-transparent"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-secondary/0 to-transparent"></div>
             </div>
           </div>
 
