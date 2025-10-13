@@ -14,7 +14,7 @@ const About = () => {
           <h3 className="text-2xl font-bold mb-6 text-secondary">
             ABOUT ME
           </h3>
-          <p className="text-base leading-relaxed text-card-foreground max-w-4xl text-justify">
+          <p className="text-lg leading-relaxed text-card-foreground max-w-4xl text-justify">
             Equipped with a multidisciplinary knowledge, combined with an understanding of business ethics and professional values. I take ownership of my work, deliver with urgency, and believe in improving not just the outcome, but also the environment it's built in. I'm adaptable, proactive, and ready to lead when needed, always striving to move teams and projects forward.
           </p>
         </div>
@@ -33,13 +33,13 @@ const About = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   University School of Automation & Robotics, GGSIPU EDC, Shahdara, Delhi
                 </h4>
-                <p className="text-sm text-card-foreground/80 mb-2">
+                <p className="text-base text-card-foreground/80 mb-2">
                   Automation and Robotics • 2021 - 2025
                 </p>
-                <p className="text-sm text-card-foreground mb-3">
+                <p className="text-base text-card-foreground mb-3">
                   Key Curriculum:
                 </p>
-                <ul className="text-sm text-card-foreground/80 space-y-1 list-disc list-inside">
+                <ul className="text-base text-card-foreground/80 space-y-1 list-disc list-inside">
                   <li>Robot Kinematics and Dynamics</li>
                   <li>Mechanical Design</li>
                   <li>PLC & SCADA</li>
@@ -53,7 +53,7 @@ const About = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   CRPF Public School, Rohini - 12th
                 </h4>
-                <p className="text-sm text-card-foreground/80">
+                <p className="text-base text-card-foreground/80">
                   CBSE • 2020 • 85%
                 </p>
               </div>
@@ -63,7 +63,7 @@ const About = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   CRPF Public School, Rohini - 10th
                 </h4>
-                <p className="text-sm text-card-foreground/80">
+                <p className="text-base text-card-foreground/80">
                   CBSE • 2018 • 91%
                 </p>
               </div>
@@ -81,10 +81,10 @@ const About = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   Process Automation Trainee
                 </h4>
-                <p className="text-sm text-card-foreground/80 mb-3">
+                <p className="text-base text-card-foreground/80 mb-3">
                   AARGEE Automation and Control, Mohali • 1 Month
                 </p>
-                <ul className="text-sm text-card-foreground space-y-2 list-disc list-inside">
+                <ul className="text-base text-card-foreground space-y-2 list-disc list-inside">
                   <li>PLC programming</li>
                   <li>Control panel assembly</li>
                   <li>Robot programming and simulation</li>
