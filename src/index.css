@@ -46,7 +46,7 @@ All colors MUST be HSL.
     --section-light: 0 0% 10%;
     --section-dark: 0 0% 96%;
     --section-accent: 0 0% 12%;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 100% 45%) 100%);
@@ -56,7 +56,7 @@ All colors MUST be HSL.
     --shadow-smooth: 0 4px 20px rgba(0, 0, 0, 0.3);
     --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 20px rgba(0, 200, 255, 0.3);
-    
+
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.2s ease-out;
@@ -98,17 +98,20 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  @layer components {
-  .section-bright {
-    --background: 0 0% 96%;           /* off-white background */
-    --foreground: 0 0% 10%;           /* dark text */
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
-    --secondary: 190 100% 40%;
-    --accent: 15 100% 55%;
-    --border: 0 0% 85%;
+@layer components {
+    .section-bright {
+      --background: 0 0% 96%;
+      /* off-white background */
+      --foreground: 0 0% 10%;
+      /* dark text */
+      --card: 0 0% 98%;
+      --card-foreground: 0 0% 10%;
+      --secondary: 190 100% 40%;
+      --accent: 15 100% 55%;
+      --border: 0 0% 85%;
+    }
   }
-}
+
   body {
     @apply bg-background text-foreground;
   }

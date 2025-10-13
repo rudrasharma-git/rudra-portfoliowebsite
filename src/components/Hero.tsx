@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Mobile: Image First */}
           <div className="order-1 md:order-2 flex justify-center animate-fade-in">
-            <div className="relative w-full max-w-md aspect-rectangle">
+            <div className="relative w-full max-w-md aspect-[3/3.8]">
               {/* IMPORTANT: Replace this src with your actual image path */}
               <img
                 src="/images/profile.png"
