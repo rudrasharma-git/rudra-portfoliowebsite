@@ -12,7 +12,7 @@ export const researchData: ResearchItem[] = [
   {
     id: 1,
     title: "Dynamic Analysis and Simulation of a Double Parallelogram-Based MIS Robot",
-    images: ["/images/R1img1.png", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Rimg/R1img1.png", "/placeholder.svg", "/placeholder.svg"],
     description:
       "This work focused on the dynamic modeling and analysis of the Remote Center of Motion (RCM) in a double-parallelogram-based minimally invasive surgical (MIS) robot. The system was modeled using the Euler–Lagrange formulation to compute dynamic forces at the RCM.",
     status: "Research",
