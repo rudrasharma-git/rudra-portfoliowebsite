@@ -33,7 +33,7 @@ const Hero = () => {
               ROBOTICS AND AI ENGINEER
             </h2>
 
-            <p className="text-sm md:text-base tracking-wide leading-relaxed text-foreground/80 max-w-xl uppercase">
+            <p className="text-sm md:text-base tracking-wide leading-relaxed text-foreground/80 max-w-xl uppercase text-justify">
               I am a Robotics and AI engineer, and I create intelligent systems
               that blend machine learning, robotic control, and automation. With
               multidisciplinary knowledge, I provide solutions with urgency,

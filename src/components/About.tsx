@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-card text-card-foreground py-24 px-6"
+      className="section-bright min-h-screen bg-card text-card-foreground py-24 px-6"
     >
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-5xl md:text-7xl font-bold mb-16 animate-fade-in">
@@ -14,7 +14,7 @@ const About = () => {
           <h3 className="text-2xl font-bold mb-6 text-secondary">
             ABOUT ME
           </h3>
-          <p className="text-base leading-relaxed text-card-foreground max-w-4xl">
+          <p className="text-base leading-relaxed text-card-foreground max-w-4xl text-justify">
             Equipped with a multidisciplinary knowledge, combined with an understanding of business ethics and professional values. I take ownership of my work, deliver with urgency, and believe in improving not just the outcome, but also the environment it's built in. I'm adaptable, proactive, and ready to lead when needed, always striving to move teams and projects forward.
           </p>
         </div>

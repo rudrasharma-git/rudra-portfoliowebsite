@@ -98,6 +98,17 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  @layer components {
+  .section-bright {
+    --background: 0 0% 96%;           /* off-white background */
+    --foreground: 0 0% 10%;           /* dark text */
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+    --secondary: 190 100% 40%;
+    --accent: 15 100% 55%;
+    --border: 0 0% 85%;
+  }
+}
   body {
     @apply bg-background text-foreground;
   }
