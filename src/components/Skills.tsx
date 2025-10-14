@@ -64,7 +64,7 @@ const skillsData: SkillCategory[] = [
     color: "accent",
   },
   {
-    title: "QA",
+    title: "Misc",
     skills: [
       "Test Automation",
       "Quality Assurance",
@@ -76,7 +76,7 @@ const skillsData: SkillCategory[] = [
     color: "secondary",
   },
   {
-    title: "Misc",
+    title: "Soft Skills",
     skills: [
       "PLC Programming",
       "HMI Development",
