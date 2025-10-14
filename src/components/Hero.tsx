@@ -43,18 +43,18 @@ const Hero = () => {
             {/* CTA */}
             <div className="pt-4">
               <div className="inline-flex items-center gap-3 group">
-                <span className="text-sm font-semibold tracking-wider">
+                {/* <span className="text-sm font-semibold tracking-wider">
                   AVAILABLE FOR WORK
-                </span>
+                </span> */}
                 <ArrowRight
                   size={20}
                   className="group-hover:translate-x-2 transition-transform duration-300"
                 />
                 <a
                   href="mailto:rudrasharma1759@gmail.com"
-                  className="text-sm font-medium text-secondary hover:underline"
+                  className="text-lg font-medium text-secondary hover:underline"
                 >
-                  rudrasharma1759@gmail.com
+                  GET IN TOUCH
                 </a>
               </div>
             </div>

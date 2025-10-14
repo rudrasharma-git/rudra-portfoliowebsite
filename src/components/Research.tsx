@@ -45,42 +45,43 @@ const Research = () => {
     >
       <div className="container mx-auto max-w-7xl">
         {/* Header with Navigation */}
-        <div className="flex items-center justify-between mb-16">
-          <h2 className="text-5xl md:text-7xl font-bold animate-fade-in">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold animate-fade-in w-full sm:w-auto text-center sm:text-left">
             RESEARCH
           </h2>
-          <div className="flex gap-3">
+          <div className="flex justify-center sm:justify-end w-full sm:w-auto gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll left"
             >
-              <ChevronLeft size={28} />
+              <ChevronLeft size={24} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-accent/20 transition-all border-2 border-border shadow-strong"
+              className="p-3 bg-primary text-primary-foreground rounded-full hover:bg-secondary/20 transition-all border-2 border-border shadow-strong"
               aria-label="Scroll right"
             >
-              <ChevronRight size={28} />
+              <ChevronRight size={24} />
             </button>
           </div>
         </div>
 
+
         {/* Horizontal Scrolling Container */}
-          <div
-            ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {researchData.map((research) => {
-              const activeImage = activeImageIndices[research.id] || 0;
-              return (
-                <div
-                  key={research.id}
-                  className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
-                >
-                  <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-accent/50 transition-all h-full flex flex-col">
+        <div
+          ref={scrollContainerRef}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 scroll-smooth"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {researchData.map((research) => {
+            const activeImage = activeImageIndices[research.id] || 0;
+            return (
+              <div
+                key={research.id}
+                className="flex-shrink-0 w-full md:w-[calc(33.333%-16px)] snap-start"
+              >
+                <div className="bg-primary text-primary-foreground rounded-2xl p-6 shadow-strong border-2 border-border hover:border-accent/50 transition-all h-full flex flex-col">
                   {/* Status Badge */}
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/30">
@@ -89,7 +90,7 @@ const Research = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem]">
+                  <h3 className="text-base md:text-lg font-bold mb-4 min-h-[3rem] text-center">
                     {research.title}
                   </h3>
 
@@ -122,11 +123,10 @@ const Research = () => {
                           {research.images.map((_, idx) => (
                             <div
                               key={idx}
-                              className={`w-1.5 h-1.5 rounded-full transition-all ${
-                                idx === activeImage
+                              className={`w-1.5 h-1.5 rounded-full transition-all ${idx === activeImage
                                   ? "bg-secondary w-6"
                                   : "bg-primary-foreground/50"
-                              }`}
+                                }`}
                             />
                           ))}
                         </div>
@@ -135,7 +135,7 @@ const Research = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-primary-foreground/80 mb-4 line-clamp-3 flex-grow">
+                  <p className="text-sm leading-relaxed text-primary-foreground/80 mb-4 line-clamp-4 flex-grow text-justify">
                     {research.description}
                   </p>
 

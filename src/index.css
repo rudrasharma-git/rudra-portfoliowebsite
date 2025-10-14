@@ -98,7 +98,7 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-@layer components {
+  @layer components {
     .section-bright {
       --background: 0 0% 96%;
       /* off-white background */
@@ -109,6 +109,24 @@ All colors MUST be HSL.
       --secondary: 190 100% 40%;
       --accent: 15 100% 55%;
       --border: 0 0% 85%;
+    }
+  }
+
+  @layer utilities {
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(3px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 0.4s ease-in-out forwards;
     }
   }
 
