@@ -6,6 +6,7 @@ export interface ResearchItem {
   status: string;
   skills: string[];
   fullDescription: string;
+  link?: string;
 }
 
 export const researchData: ResearchItem[] = [
@@ -29,6 +30,7 @@ A SolidWorks-based FBD model was developed to obtain geometric parameters, follo
 - SolidWorks design and FBD modeling
 - Sensitivity and RCM deviation analysis in constrained mechanisms
 - Understanding of geometric constraint systems and their effect on dynamic stability`,
+    link: ' ',
   },
   {
     id: 2,
@@ -53,6 +55,7 @@ A key innovation was the incorporation of fiber Bragg grating (FBG) shape sensor
 - Python/C++ development with PyTorch, TensorFlow, and Stable Baselines3
 - Experience with domain randomization, adaptive learning, and MPC
 - Biomedical robotics: tissue-safe design and control for MIS`,
+    link: ' ',
   },
   {
     id: 3,
@@ -73,6 +76,7 @@ The review consolidated emerging research trends in stimuli-responsive materials
 - Knowledge of material programming and structural morphing in soft robotics
 - Analytical comparison of design, simulation, and fabrication frameworks
 - Scientific writing, data extraction, and critical synthesis of technical literature`,
+    link: ' ',
   },
   {
     id: 4,
@@ -93,6 +97,7 @@ The review also summarized the evolution of control architectures and actuation 
 - Knowledge of control system design for constrained robotic systems
 - Experience in comparative evaluation and synthesis of research literature
 - Technical writing and scientific documentation of robotic mechanisms`,
+    link: ' ',
   },
   {
     id: 5,
@@ -113,5 +118,6 @@ Control methodologies including reinforcement learning and physics-informed AI w
 - Knowledge of smart materials and advanced fabrication techniques
 - Familiarity with AI-driven control approaches for nonlinear soft systems
 - Experience in trend identification, technical summarization, and future research mapping`,
+    link: ' ',
   },
 ];

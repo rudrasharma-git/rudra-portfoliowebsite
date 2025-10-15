@@ -3,6 +3,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { researchData } from "@/data/researchData";
+import { ArrowRight } from "lucide-react";
 
 const ResearchDetail = () => {
   const { id } = useParams();
@@ -58,7 +59,7 @@ const ResearchDetail = () => {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in text-center">
           {research.title}
         </h1>
 
@@ -121,8 +122,25 @@ const ResearchDetail = () => {
 
         {/* Full Description */}
         <div className="prose prose-lg max-w-none">
-          <div className="whitespace-pre-line text-foreground/80 leading-relaxed">
+          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
             {research.fullDescription}
+          </div>
+        </div>
+
+        {/* link to project */}
+        <div className="pt-4">
+          <div className="inline-flex items-center gap-3 group">
+            
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-2 mb-6 transition-transform duration-300"
+            />
+            <a
+              href={research.link}
+              className="text-lg mb-6 font-medium text-secondary hover:underline"
+            >
+              LINK
+            </a>
           </div>
         </div>
       </div>

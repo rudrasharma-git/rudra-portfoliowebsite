@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   skills: string[];
   fullDescription: string;
+  link?: string; 
 }
 
 export const projectsData: Project[] = [
@@ -34,6 +35,7 @@ Create a small, efficient transformer trained on domain-specific data (e.g., rob
 
 **Job Relevance:**
 LLM Engineer • AI Research Intern • NLP Engineer`,
+    link: ' ',
   },
   {
     id: 2,
@@ -60,6 +62,7 @@ Design a small-scale Vision-Language Model that can interpret robot camera feed 
 
 **Job Relevance:**
 Computer Vision Engineer • Multimodal AI Research • Robotics Perception Engineer`,
+    link: ' ',
   },
   {
     id: 3,
@@ -86,6 +89,7 @@ A 3D simulation environment (Gazebo or Webots) for testing path planning algorit
 
 **Job Relevance:**
 Robotics Software Engineer • Path Planning Engineer • ROS Developer`,
+    link: ' ',
   },
   {
     id: 4,
@@ -112,6 +116,7 @@ Compare two navigation systems — one based on LIDAR SLAM, and another using mo
 
 **Job Relevance:**
 Autonomous Vehicle Engineer • Robotics Perception • Embedded Vision Developer`,
+    link: ' ',
   },
   {
     id: 5,
@@ -137,6 +142,7 @@ Develop a real-time defect detection system for factory products (e.g., detectin
 
 **Job Relevance:**
 Computer Vision Engineer • Automation Engineer • Quality Inspection AI Developer`,
+    link: ' ',
   },
   {
     id: 6,
@@ -162,6 +168,7 @@ Automate a virtual production line in Factory I/O using Siemens TIA Portal / Cod
 
 **Job Relevance:**
 Industrial Automation Engineer • Controls Engineer • Mechatronics Engineer`,
+    link: ' ',
   },
   {
     id: 7,
@@ -187,6 +194,7 @@ Design a Special Purpose Machine (SPM) for automated iron temperature testing. I
 
 **Job Relevance:**
 Automation Engineer • Control Systems Developer • Mechatronics Design Engineer`,
+    link: ' ',
   },
   {
     id: 8,
@@ -212,5 +220,6 @@ Design and simulate a soft robotic manipulator that mimics biological motion —
 
 **Job Relevance:**
 R&D Engineer • Robotics Researcher • Mechatronics Engineer`,
+    link: ' ',
   },
 ];

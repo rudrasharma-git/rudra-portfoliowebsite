@@ -3,6 +3,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { projectsData } from "@/data/projectsData";
+import { ArrowRight } from "lucide-react";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -51,7 +52,7 @@ const ProjectDetail = () => {
       {/* Content */}
       <div className="container mx-auto max-w-5xl px-6 py-16">
         {/* Title */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold mb-12 animate-fade-in text-center">
           {project.title}
         </h1>
 
@@ -83,11 +84,10 @@ const ProjectDetail = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveImage(idx)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      idx === activeImage
+                    className={`w-2 h-2 rounded-full transition-all ${idx === activeImage
                         ? "bg-secondary w-8"
                         : "bg-primary-foreground/50"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -114,13 +114,29 @@ const ProjectDetail = () => {
 
         {/* Full Description */}
         <div className="prose prose-lg max-w-none">
-          <div className="whitespace-pre-line text-foreground/80 leading-relaxed">
+          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
             {project.fullDescription}
           </div>
         </div>
+        
+        {/* link to project */}
+        <div className="pt-4">
+          <div className="inline-flex items-center gap-3 group">
+            
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-2 mb-6 transition-transform duration-300"
+            />
+            <a
+              href={project.link}
+              className="text-lg mb-6 font-medium text-secondary hover:underline"
+            >
+              LINK
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    </div>);
 };
 
-export default ProjectDetail;
+      export default ProjectDetail;
