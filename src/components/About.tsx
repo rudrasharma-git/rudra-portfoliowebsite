@@ -26,7 +26,7 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6 text-secondary">
               EDUCATION
             </h3>
-            
+
             <div className="space-y-6">
               {/* College */}
               <div className="border-l-2 border-secondary pl-6">
@@ -79,7 +79,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="border-l-2 border-accent pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  Process Automation Trainee
+                  Robotic Process Automation Trainee
                 </h4>
                 <p className="text-base text-card-foreground/80 mb-3">
                   AARGEE Automation and Control, Mohali • 1 Month
@@ -90,6 +90,28 @@ const About = () => {
                   <li>Robot programming and simulation</li>
                   <li>Automating special-purpose machines</li>
                 </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-6 text-secondary">
+              ACHIEVEMENTS
+            </h3>
+
+            <div className="space-y-6">
+              <div className="border-l-2 border-accent pl-6">
+                <h4 className="text-lg font-semibold mb-2">
+                  • BEST PAPER AWARD
+                </h4>
+                <p className="text-base text-card-foreground/80 mb-3">
+                  8th International Conference on Advanced Production and Industrial Engineering (ICAPIE - 2024)
+                </p>
+                <h4 className="text-lg font-semibold mb-2">
+                  • PRESIDENT - Perceptions, The Publication Club of USAR 
+                </h4>
+                <p className="text-base text-card-foreground/80 mb-3">
+                    (2022-24)
+                    </p>
+            
               </div>
             </div>
           </div>

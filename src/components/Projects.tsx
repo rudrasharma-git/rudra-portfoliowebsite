@@ -117,8 +117,8 @@ const Projects = () => {
                             <div
                               key={idx}
                               className={`w-1.5 h-1.5 rounded-full transition-all ${idx === activeImage
-                                  ? "bg-secondary w-6"
-                                  : "bg-primary-foreground/50"
+                                  ? "bg-primary w-6"
+                                  : "bg-secondary-foreground/100"
                                 }`}
                             />
                           ))}

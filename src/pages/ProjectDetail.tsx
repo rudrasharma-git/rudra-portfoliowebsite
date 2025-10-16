@@ -85,8 +85,8 @@ const ProjectDetail = () => {
                     key={idx}
                     onClick={() => setActiveImage(idx)}
                     className={`w-2 h-2 rounded-full transition-all ${idx === activeImage
-                        ? "bg-secondary w-8"
-                        : "bg-primary-foreground/50"
+                      ? "bg-primary w-6"
+                      : "bg-secondary-foreground/100"
                       }`}
                   />
                 ))}
@@ -118,11 +118,11 @@ const ProjectDetail = () => {
             {project.fullDescription}
           </div>
         </div>
-        
+
         {/* link to project */}
         <div className="pt-4">
           <div className="inline-flex items-center gap-3 group">
-            
+
             <ArrowRight
               size={20}
               className="group-hover:translate-x-2 mb-6 transition-transform duration-300"
@@ -139,4 +139,4 @@ const ProjectDetail = () => {
     </div>);
 };
 
-      export default ProjectDetail;
+export default ProjectDetail;

@@ -9,6 +9,34 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
+  
+  {
+    id: 8,
+    title: 'Soft Robot Design & Workspace Analysis – "BioGrip Soft Arm"',
+    images: ["/Pimg/P8img1.png", "/Pimg/P8img2.png", "/Pimg/P8img3.png"],
+    description:
+      "Design and simulate a soft robotic manipulator that mimics biological motion — for tasks like gentle object handling or medical use.",
+    skills: ["Soft Robotics", "CAD Design", "FEA", "MATLAB", "PyBullet", "Kinematic Analysis", "Control Systems"],
+    fullDescription: `**Idea:**
+Design and simulate a soft robotic manipulator that mimics biological motion — for tasks like gentle object handling or medical use.
+
+**Implementation:**
+- CAD design (Fusion360 / SolidWorks) → pneumatic or cable-driven soft joints
+- Simulate in MATLAB / PyBullet to analyze workspace and flexibility
+- Develop control using FEA + pressure feedback loop
+- Visualize reachable workspace in 3D
+
+**Skills Learned:**
+- Soft robotics modeling & FEA
+- Kinematic & dynamic analysis
+- MATLAB or ROS-based control
+- Simulation & experimental validation
+
+**Job Relevance:**
+R&D Engineer • Robotics Researcher • Mechatronics Engineer`,
+    link: 'https://github.com/rudrasharma-git/Modular-Continuum-Robot-Design-and-Workspace-Analysis',
+  },
+  
   {
     id: 1,
     title: 'Building an LLM from Scratch – "MicroGPT: Domain-Adapted Mini Language Model"',
@@ -196,30 +224,5 @@ Design a Special Purpose Machine (SPM) for automated iron temperature testing. I
 Automation Engineer • Control Systems Developer • Mechatronics Design Engineer`,
     link: ' ',
   },
-  {
-    id: 8,
-    title: 'Soft Robot Design & Workspace Analysis – "BioGrip Soft Arm"',
-    images: ["/Pimg/P8img1.png", "/Pimg/P8img2.png", "/Pimg/P8img3.png"],
-    description:
-      "Design and simulate a soft robotic manipulator that mimics biological motion — for tasks like gentle object handling or medical use.",
-    skills: ["Soft Robotics", "CAD Design", "FEA", "MATLAB", "PyBullet", "Kinematic Analysis", "Control Systems"],
-    fullDescription: `**Idea:**
-Design and simulate a soft robotic manipulator that mimics biological motion — for tasks like gentle object handling or medical use.
-
-**Implementation:**
-- CAD design (Fusion360 / SolidWorks) → pneumatic or cable-driven soft joints
-- Simulate in MATLAB / PyBullet to analyze workspace and flexibility
-- Develop control using FEA + pressure feedback loop
-- Visualize reachable workspace in 3D
-
-**Skills Learned:**
-- Soft robotics modeling & FEA
-- Kinematic & dynamic analysis
-- MATLAB or ROS-based control
-- Simulation & experimental validation
-
-**Job Relevance:**
-R&D Engineer • Robotics Researcher • Mechatronics Engineer`,
-    link: 'https://github.com/rudrasharma-git/Modular-Continuum-Robot-Design-and-Workspace-Analysis',
-  },
+  
 ];
