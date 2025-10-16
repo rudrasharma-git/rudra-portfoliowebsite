@@ -64,7 +64,7 @@ const ResearchDetail = () => {
         </h1>
 
         {/* Image Carousel */}
-        <div className="relative mb-12 aspect-video bg-muted rounded-xl overflow-hidden">
+        <div className="relative mb-12 bg-muted rounded-xl overflow-hidden">
           <img
             src={research.images[activeImage]}
             alt={`${research.title} - Image ${activeImage + 1}`}

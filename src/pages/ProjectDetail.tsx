@@ -57,7 +57,7 @@ const ProjectDetail = () => {
         </h1>
 
         {/* Image Carousel */}
-        <div className="relative mb-12 aspect-video bg-muted rounded-xl overflow-hidden">
+        <div className="relative mb-12 bg-muted rounded-xl overflow-hidden">
           <img
             src={project.images[activeImage]}
             alt={`${project.title} - Image ${activeImage + 1}`}

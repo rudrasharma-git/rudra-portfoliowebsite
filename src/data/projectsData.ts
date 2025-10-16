@@ -146,8 +146,8 @@ Computer Vision Engineer • Automation Engineer • Quality Inspection AI Devel
   },
   {
     id: 6,
-    title: 'Factory Automation using FACTORY I/O – "SmartPLC 4.0"',
-    images: ["/placeholder.svg", "/placeholder.svg"],
+    title: 'Machine Design and Offline Robot Programming using SolidWorks and RoboDK',
+    images: ["/Pimg/P6img1.png", "/Pimg/P6img2.png", "/Pimg/P6img3.png", "/Pimg/P6img4.png", "/Pimg/P6img5.png", "/Pimg/P6img6.png"],
     description:
       "Automate a virtual production line in Factory I/O using Siemens TIA Portal / Codesys. Implement smart logic like predictive maintenance and adaptive scheduling.",
     skills: ["Factory I/O", "PLC Programming", "Siemens TIA Portal", "OPC-UA", "SCADA", "HMI", "Automation"],
@@ -168,12 +168,12 @@ Automate a virtual production line in Factory I/O using Siemens TIA Portal / Cod
 
 **Job Relevance:**
 Industrial Automation Engineer • Controls Engineer • Mechatronics Engineer`,
-    link: ' ',
+    link: 'https://github.com/rudrasharma-git/My-CAD',
   },
   {
     id: 7,
     title: 'SPM Design & Deployment – "Iron Temperature Testing Station"',
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Pimg/P7img1.jpg", "/Pimg/P7img2.jpg", "/Pimg/P7img3.jpg", "/Pimg/P7img4.jpg", "/Pimg/P7img5.jpg"],
     description:
       "Design a Special Purpose Machine (SPM) for automated iron temperature testing. It measures, logs, and signals if the sample is out of tolerance.",
     skills: ["PLC Programming", "HMI Development", "Control Systems", "Circuit Design", "WinCC", "Industrial Automation"],
@@ -199,7 +199,7 @@ Automation Engineer • Control Systems Developer • Mechatronics Design Engine
   {
     id: 8,
     title: 'Soft Robot Design & Workspace Analysis – "BioGrip Soft Arm"',
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Pimg/P8img1.png", "/Pimg/P8img2.png", "/Pimg/P8img3.png"],
     description:
       "Design and simulate a soft robotic manipulator that mimics biological motion — for tasks like gentle object handling or medical use.",
     skills: ["Soft Robotics", "CAD Design", "FEA", "MATLAB", "PyBullet", "Kinematic Analysis", "Control Systems"],
@@ -220,6 +220,6 @@ Design and simulate a soft robotic manipulator that mimics biological motion —
 
 **Job Relevance:**
 R&D Engineer • Robotics Researcher • Mechatronics Engineer`,
-    link: ' ',
+    link: 'https://github.com/rudrasharma-git/Modular-Continuum-Robot-Design-and-Workspace-Analysis',
   },
 ];

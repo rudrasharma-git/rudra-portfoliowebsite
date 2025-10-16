@@ -35,7 +35,7 @@ A SolidWorks-based FBD model was developed to obtain geometric parameters, follo
   {
     id: 2,
     title: "Adaptive Deep Reinforcement Learning Control for a Soft Continuum Robotic Catheter in MIS",
-    images: ["/placeholder.svg", "/placeholder.svg"],
+    images: ["/Rimg/R2img1.png", "/Rimg/R2img2.png", "/Rimg/R2img3.png"],
     description:
       "This project proposed an adaptive hybrid control strategy for a cable-driven soft continuum robotic catheter used in minimally invasive surgery, integrating deep reinforcement learning with physics-based models.",
     status: "Research",
@@ -60,7 +60,7 @@ A key innovation was the incorporation of fiber Bragg grating (FBG) shape sensor
   {
     id: 3,
     title: "Integration of 4D Printing in Soft Robotics",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Rimg/R3img1.png"],
     description:
       "This systematic review comprehensively analyzed the integration of 4D printing technologies within soft robotics, emphasizing material programming, actuation mechanisms, and structural design.",
     status: "Review",
@@ -81,7 +81,7 @@ The review consolidated emerging research trends in stimuli-responsive materials
   {
     id: 4,
     title: "A Systematic Literature Review of RCM-Based MIS Robot Mechanisms",
-    images: ["/placeholder.svg", "/placeholder.svg"],
+    images: ["/Rimg/R4img1.png", "/Rimg/R4img2.png"],
     description:
       "This review systematically examined various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches.",
     status: "Review",
@@ -102,11 +102,11 @@ The review also summarized the evolution of control architectures and actuation 
   {
     id: 5,
     title: "Design of Soft Robots: A Review",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Rimg/R5img1.png","/Rimg/R5img2.png"],
     description:
       "This extensive review covered over 380 research papers (1961–2025) to chart the evolution of soft robotics design, focusing on actuators, sensors, control paradigms, and fabrication technologies.",
     status: "Review",
-    skills: ["Soft Robotics", "Actuators", "Sensors", "AI Control", "Materials Science", "Fabrication"],
+    skills: ["Soft Robotics", "Actuators", "Sensors", "AI Control Models", "Materials Science", "Fabrication"],
     fullDescription: `**Description:**
 This extensive review covered over 380 research papers (1961–2025) to chart the evolution of soft robotics design, focusing on actuators, sensors, control paradigms, and fabrication technologies. The paper explored material innovations such as shape-memory polymers, hydrogels, and liquid crystal elastomers, along with advanced manufacturing techniques like 3D/4D printing and origami-inspired fabrication.
 
