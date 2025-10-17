@@ -40,7 +40,7 @@ R&D Engineer • Robotics Researcher • Mechatronics Engineer`,
   {
     id: 1,
     title: 'Building an LLM from Scratch – "MicroGPT: Domain-Adapted Mini Language Model"',
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: ["/Pimg/P1img1.svg", "/Pimg/P1img2.png", "/Pimg/P1img3.png" , "/Pimg/P1img3.5.png" , "/Pimg/P1img4.png"],
     description:
       "Create a small, efficient transformer trained on domain-specific data (e.g., robotics research papers, industrial automation manuals). The goal is to build a 'domain brain' — a compact model that understands and answers questions about robotics and automation.",
     skills: ["Python", "PyTorch", "NLP", "Transformers", "Deep Learning", "Tokenization", "Fine-tuning", "Gradio"],
@@ -68,7 +68,7 @@ LLM Engineer • AI Research Intern • NLP Engineer`,
   {
     id: 2,
     title: 'Creating a Vision-Language Model (VLM) from Scratch – "RoboSeeTalk"',
-    images: ["/placeholder.svg", "/placeholder.svg"],
+    images: ["/Pimg/P2img1.png", "/Pimg/P2img2.png", "/Pimg/P2img3.png"],
     description:
       "Design a small-scale Vision-Language Model that can interpret robot camera feed and explain what it sees — e.g., 'That's a conveyor belt with 5 red boxes' or 'The gripper is misaligned with the object.'",
     skills: ["Computer Vision", "VLM", "ResNet", "ViT", "CLIP", "Multimodal Learning", "PyTorch"],
@@ -94,8 +94,8 @@ Computer Vision Engineer • Multimodal AI Research • Robotics Perception Engi
   },
   {
     id: 3,
-    title: 'Virtual Robot Path Planning – "RoboNav SimLab"',
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    title: 'Sports Field Anslyser and Player Tracking System',
+    images: ["/Pimg/P3img3.png", "/Pimg/P3img1.png", "/Pimg/P3img2.png"],
     description:
       "A 3D simulation environment (Gazebo or Webots) for testing path planning algorithms — Dijkstra, A*, RRT*, DWA, etc. The goal is to visualize and benchmark planners in complex obstacle-rich maps.",
     skills: ["ROS2", "Gazebo", "Path Planning", "A*", "RRT*", "DWA", "Python", "C++"],
@@ -121,8 +121,8 @@ Robotics Software Engineer • Path Planning Engineer • ROS Developer`,
   },
   {
     id: 4,
-    title: 'AGV Comparison using LIDAR vs Camera – "SmartVisionNav"',
-    images: ["/placeholder.svg", "/placeholder.svg"],
+    title: 'RoboDog- Mapping and Navigation',
+    images: ["/Pimg/P4img1.png", "/Pimg/P4img2.png"],
     description:
       "Compare two navigation systems — one based on LIDAR SLAM, and another using monocular/depth camera vision. Evaluate accuracy, latency, and cost trade-offs.",
     skills: ["ROS2", "SLAM", "LIDAR", "Computer Vision", "ORB-SLAM", "Sensor Fusion", "Gazebo"],
@@ -148,8 +148,8 @@ Autonomous Vehicle Engineer • Robotics Perception • Embedded Vision Develope
   },
   {
     id: 5,
-    title: 'Robot Vision – "Defect Detection on Conveyor System"',
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    title: 'Implementing Path Planning and Trajectory Optimization for a Quadcopter',
+    images: ["/Pimg/P5img0.png", "/Pimg/P5img1.png", "/Pimg/P5img2.png", "/Pimg/P5img3.png", "/Pimg/P5img4.png"],
     description:
       "Develop a real-time defect detection system for factory products (e.g., detecting cracks, dents, or mislabels). Use camera feed and CNN-based detection.",
     skills: ["Computer Vision", "YOLOv8", "OpenCV", "Object Detection", "Real-time Processing", "Edge AI"],

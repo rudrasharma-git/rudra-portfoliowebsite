@@ -106,10 +106,10 @@ const About = () => {
                   8th International Conference on Advanced Production and Industrial Engineering (ICAPIE - 2024)
                 </p>
                 <h4 className="text-lg font-semibold mb-2">
-                  • PRESIDENT - Perceptions, The Publication Club of USAR 
+                  • PRESIDENT - Perceptions, The Publication Club of USAR <br/> (2022-2024) 
                 </h4>
                 <p className="text-base text-card-foreground/80 mb-3">
-                    (2022-24)
+                
                     </p>
             
               </div>
