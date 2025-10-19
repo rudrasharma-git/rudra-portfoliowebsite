@@ -19,7 +19,7 @@ const Connect = () => {
             </p>
             <a
               href="mailto:rudrasharma1759@gmail.com"
-              className="text-4xl md:text-5xl font-medium text-card-foreground hover:text-secondary transition-colors break-all block"
+              className="text-3xl md:text-4xl font-bold text-card-foreground hover:text-secondary transition-colors break-all block"
             >
               rudrasharma1759@gmail.com
             </a>
@@ -32,7 +32,7 @@ const Connect = () => {
             </p>
             <a
               href="tel:+919990049238"
-              className="text-4xl md:text-6xl font-bold text-card-foreground hover:text-secondary transition-colors block"
+              className="text-3xl md:text-4xl font-bold text-card-foreground hover:text-secondary transition-colors block"
             >
               +91 99900 49238
             </a>
@@ -74,7 +74,7 @@ const Connect = () => {
           {/* Quote */}
           <div className="pt-12">
             <p className="text-xl md:text-4xl font-light italic text-card-foreground/80 tracking-wide uppercase">
-              "Every great story has a beginning."
+              "The goal is not just intelligent machines, but machines that make humanity better."
             </p>
           </div>
         </div>

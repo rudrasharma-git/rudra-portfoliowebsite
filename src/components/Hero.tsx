@@ -40,7 +40,7 @@ const Hero = () => {
               efficiency, and creativity. */}
               Designing Intelligent, Adaptive Systems<br/>
               Transforming the future of Problem Solving<br/>
-              Integrating  
+              Integrating business values and professional ethics 
             </p>
 
             {/* CTA */}

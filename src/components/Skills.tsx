@@ -11,15 +11,8 @@ const skillsData: SkillCategory[] = [
   {
     title: "Robotics",
     skills: [
-      "ROS/ROS2",
-      "Path Planning",
-      "SLAM",
-      "Kinematics & Dynamics",
-      "Control Systems",
-      "Soft Robotics",
-      "Surgical Robotics",
-      "AGV Systems",
-      "Sensor Fusion",
+      "Robot Kinematics",
+      "Dynamic Modeling",
     ],
     color: "secondary",
   },

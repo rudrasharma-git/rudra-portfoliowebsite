@@ -15,8 +15,7 @@ const About = () => {
             ABOUT ME
           </h3>
           <p className="text-lg leading-relaxed text-card-foreground max-w-6xl text-justify">
-            Equipped with a multidisciplinary knowledge, combined with an understanding of business ethics and professional values. I take ownership of my work, deliver with urgency, and believe in improving not just the outcome, but also the environment it's built in. I'm adaptable, proactive, and ready to lead when needed, always striving to move teams and projects forward.
-          </p>
+Equipped with multidisciplinary expertise and guided by strong business ethics and professional values, I approach every task with a sense of urgency and purpose. I focus not only on achieving exceptional results but also on fostering a positive and efficient work environment. Adaptable and proactive, I’m ready to take the lead when needed, driving teams and projects forward with clarity, collaboration, and commitment to continuous improvement.          </p>
         </div>
 
         {/* Education and Experience - Horizontal Layout */}

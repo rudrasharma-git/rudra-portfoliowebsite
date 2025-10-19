@@ -12,72 +12,112 @@ export interface ResearchItem {
 export const researchData: ResearchItem[] = [
   {
     id: 1,
-    title: "Dynamic Analysis and Simulation of a Double Parallelogram-Based MIS Robot",
+    title: "Dynamic Analysis and Simulation of a Double Parallelogram-Based RCM Mechanism for MIS Robots",
     images: ["/Rimg/R1img1.png", "/Rimg/R1img2.png", "/Rimg/R1img3.png"],
     description:
-      "This work focused on the dynamic modeling and analysis of the Remote Center of Motion (RCM) in a double-parallelogram-based minimally invasive surgical (MIS) robot. The system was modeled using the Euler–Lagrange formulation to compute dynamic forces at the RCM.",
+      "This research focuses on the dynamic modeling of a double-parallelogram Remote Center of Motion (RCM) mechanism used in minimally invasive surgical (MIS) robots. The study began with the development of a comprehensive kinematic model to derive the constraint equations governing the active joint parameters.",
     status: "Research",
-    skills: ["Robotics Dynamics", "MATLAB", "SolidWorks", "ADAMS", "Euler-Lagrange", "RCM Analysis"],
-    fullDescription: `**Description:**
-This work focused on the dynamic modeling and analysis of the Remote Center of Motion (RCM) in a double-parallelogram-based minimally invasive surgical (MIS) robot. The system, being geometrically constrained, was modeled using the Euler–Lagrange formulation to compute the dynamic forces acting on the RCM while considering link length inequalities — the key novelty of this study.
+    skills: ["Robot Kinematics", "Robot Dynamics", "MATLAB", "SolidWorks", "Precision Design", "ADAMS", "Euler-Lagrange Model", "RCM Analysis", "Surgical Robotics"],
+    fullDescription: 
+`DESCRIPTION: This research focuses on the dynamic modeling of a double-parallelogram Remote Center of Motion (RCM) mechanism used in minimally invasive surgical (MIS) robots. The study began with the development of a comprehensive kinematic model to derive the constraint equations governing the active joint parameters.
 
-A SolidWorks-based FBD model was developed to obtain geometric parameters, followed by kinematic and constraint modeling in MATLAB. The dynamic model integrated these constraints to evaluate the torque deviation at the RCM due to manufacturing inaccuracies. The results were validated against ADAMS simulations, showing consistency and quantifying the sensitivity of RCM deviation to link-length perturbations.
+A key novelty of this work lies in the consideration of link length inequalities arising from manufacturing tolerances, a factor often overlooked in prior studies but highly relevant to real-world implementations. Additionally, unlike most research that focuses solely on end-effector dynamics, this work extends the analysis to the RCM point—the critical pivot about which the surgical tool operates—thereby offering a more physically accurate insight into system behavior.
 
-**Skills Learned:**
-- Advanced robot dynamics and kinematics (Euler–Lagrange and constraint modeling)
-- MATLAB simulation and symbolic computation
-- Multibody dynamics using ADAMS
-- SolidWorks design and FBD modeling
-- Sensitivity and RCM deviation analysis in constrained mechanisms
-- Understanding of geometric constraint systems and their effect on dynamic stability`,
-    link: ' ',
+The double-parallelogram configuration was selected for its ability to achieve a geometrically constrained RCM and maintain decoupled joint parameters, enhancing control accuracy and mechanical stability. Kinematic and dynamic formulations were derived and computed using MATLAB, employing the Euler–Lagrange approach for dynamic modeling.
+
+To validate the analytical model, a CAD-based simulation of the mechanism was developed and analyzed within the ADAMS environment. Comparative results between the analytical and simulation models were used to evaluate the torque characteristics at the RCM point, confirming the accuracy and robustness of the proposed dynamic model.
+
+THE RESEARCH IS IN PROGRESS AND WILL BE UPDATED SOON`,
+
+link: 'https://github.com/rudrasharma-git/RCM-Design-Kinematic-Dynamics-Simulation',
   },
+
   {
     id: 2,
-    title: "Adaptive Deep Reinforcement Learning Control for a Soft Continuum Robotic Catheter in MIS",
+    title: "Adaptive Deep Reinforcement Learning Framework for Real-Time 3D Shape Control of Continuum Soft Robots",
     images: ["/Rimg/R2img1.png", "/Rimg/R2img2.png", "/Rimg/R2img3.png"],
     description:
-      "This project proposed an adaptive hybrid control strategy for a cable-driven soft continuum robotic catheter used in minimally invasive surgery, integrating deep reinforcement learning with physics-based models.",
+      "Soft continuum robots are transforming fields like minimally invasive surgery and human-robot collaboration due to their flexibility and safety. However, their nonlinear dynamics and difficult-to-model deformations make real-time control extremely challenging. This project integrates advanced sensing, adaptive control, and reinforcement learning to overcome those limitations, enabling accurate and intelligent motion control for next-generation soft robots." ,   
     status: "Research",
     skills: ["Deep RL", "Soft Robotics", "DDPG", "PPO", "SOFA", "MuJoCo", "PyBullet", "ROS2", "PyTorch"],
-    fullDescription: `**Description:**
-This project proposed an adaptive hybrid control strategy for a cable-driven soft continuum robotic catheter used in minimally invasive surgery. The control framework integrated deep reinforcement learning (RL) with physics-based models, trained using domain-randomized simulations in SOFA, MuJoCo, and PyBullet/SoMo environments.
+    fullDescription: 
+`1. Background
 
-A key innovation was the incorporation of fiber Bragg grating (FBG) shape sensors for proprioceptive feedback and online adaptation, enabling real-time shape servo control under uncertain tissue interactions. The hybrid analytic + learned control pipeline achieved fine motion correction and adaptive compensation for unmodeled dynamics, validated through simulation and phantom experiments.
+Soft continuum robots are transforming fields like minimally invasive surgery and human-robot collaboration due to their flexibility and safety. However, their nonlinear dynamics and difficult-to-model deformations make real-time control extremely challenging. This project integrates advanced sensing, adaptive control, and reinforcement learning to overcome those limitations, enabling accurate and intelligent motion control for next-generation soft robots.
 
-**Skills Learned:**
-- Soft robotics design and control (continuum kinematics, Cosserat modeling)
-- Deep Reinforcement Learning (DDPG, PPO, SAC) for robotic control
-- Hybrid ML-physics modeling and sim-to-real transfer
-- Simulation environments: SOFA, MuJoCo, PyBullet, Isaac Sim
-- Sensor integration (FBG optical sensing, feedback-based adaptation)
-- ROS/ROS2 integration and real-time control implementation
-- Python/C++ development with PyTorch, TensorFlow, and Stable Baselines3
-- Experience with domain randomization, adaptive learning, and MPC
-- Biomedical robotics: tissue-safe design and control for MIS`,
-    link: ' ',
+2. Objective
+
+The goal is to develop a hybrid adaptive reinforcement learning (RL) controller capable of real-time 3D shape control of a fiber Bragg grating (FBG)-embedded continuum robot. The system learns and adapts dynamically to unstructured environments while maintaining stability, accuracy, and robustness.
+
+3. Novelty
+
+  - Hybrid Learning Control: Combines adaptive neural network control (for guaranteed stability) with reinforcement learning (for adaptability and data-driven optimization).
+  - Sensor-Driven Intelligence: Uses FBG feedback for proprioceptive learning — allowing the robot to “feel” and adjust its own shape in real time.
+  - Reduced Training Time: Employs an Axis-Space (AS) RL framework to drastically reduce sample complexity and speed up convergence.
+  - Theoretical Stability: Integrates Lyapunov-based adaptation for mathematically proven convergence and safety.
+  - Real-World Focus: Designed for use in surgical and inspection robots operating in unpredictable environments.
+
+4. Scope
+
+- The research sits at the intersection of soft robotics, machine learning, and nonlinear control systems, covering:
+- Real-time modeling and control of soft continuum manipulators.
+- Reinforcement learning policy design for high-DOF systems.
+- Integration of fiber Bragg grating sensors for 3D shape estimation.
+- Safe learning and adaptation under environmental uncertainty.
+
+5. Skills Involved
+
+- Soft robotics design and actuation mechanisms
+- Machine learning & reinforcement learning (DDQN, ASDDQN, policy optimization)
+- Adaptive neural network control & Lyapunov stability analysis
+- Signal processing and sensor fusion (FBG data filtering)
+- Simulation and modeling (MATLAB, Python, SoRoSim, Elastica)
+
+6. Methodology
+
+  - System Modeling: Design a tendon-driven soft robot embedded with FBG sensors for 3D shape feedback.
+  - FBG-Based Learning: Implement adaptive neural networks for online modeling and shape estimation.
+  - Reinforcement Learning: Develop an Axis-Space DDQN controller for efficient policy learning in simulation.
+  - Hybrid Control Integration: Fuse adaptive control and RL policy to ensure real-time stability and learning adaptability.
+  - Testing & Validation: Compare against baseline controllers for tracking accuracy, convergence speed, and robustness.
+  - Simulation-to-Reality Transfer: Deploy on physical prototypes and analyze real-world adaptability.
+
+7. Expected Outcomes
+
+  - Real-time adaptive control system for continuum robots.
+  - 10× faster convergence and 5× improved accuracy compared to standard DRL methods.
+  - A generalizable hybrid framework for learning-based control of soft manipulators.
+  - Potential applications in surgical robotics, industrial inspection, and biomechanical systems.
+
+8. Future Extensions
+
+  - Multi-modal sensor fusion (FBG + vision).
+  - Bimanual or multi-segment continuum robot coordination.
+  - Meta-learning for task transfer across different robot morphologies.
+  
+  THE RESEARCH IS IN PROGRESS AND WILL BE UPDATED SOON. IF YOU WANT TO KNOW MORE ABOUT THIS RESEARCH OR COLLABORATE, FEEL FREE TO REACH OUT TO ME.`,
+
+    link:'https://www.linkedin.com/in/rudra-sharma-3045992b1/' ,
   },
+
   {
     id: 3,
     title: "Integration of 4D Printing in Soft Robotics",
     images: ["/Rimg/R3img1.png"],
     description:
-      "This systematic review comprehensively analyzed the integration of 4D printing technologies within soft robotics, emphasizing material programming, actuation mechanisms, and structural design.",
+      "This work presents a systematic review of recent advancements in 4D printing, with a specific emphasis on material innovations, structural programming strategies, and their integration into the field of soft robotics. The review synthesizes findings from studies between 1965–2025, focusing on stimuli-responsive materials such as shape-memory polymers (SMPs), hydrogels, liquid crystal elastomers (LCEs), and liquid metal composites (e.g., EGaln-SLMNPs) that enable dynamic shape transformations under thermal, optical, magnetic, or pH stimuli. It explores advanced design methodologies, including bio-inspired structures (e.g., limpet-inspired actuators, Mimosa-like robots), multi-material systems, and computational models (FEA, multi-physics simulations) for optimizing adaptive behaviours. ",
     status: "Review",
-    skills: ["4D Printing", "Soft Robotics", "Material Science", "Systematic Review", "SIGMA 2020 Protocol"],
-    fullDescription: `**Description:**
-This systematic review comprehensively analyzed the integration of 4D printing technologies within soft robotics, emphasizing material programming, actuation mechanisms, and structural design. Using the SIGMA 2020 methodology for unbiased literature selection, the study categorized findings across key domains — including material characterization, simulation, design methodologies, fabrication techniques, and applications in adaptive robotic systems.
+    skills: ["4D Printing", "Soft Robotics","FEA", "Smart Materials", "Systematic Literature Review", "Sensors & Actuators"],
+    fullDescription: `DESCRIPTION:
 
-The review consolidated emerging research trends in stimuli-responsive materials and programmable architectures, providing a comparative framework to guide future innovations in self-morphing soft robots.
+This work presents a systematic review of recent advancements in 4D printing, with a specific emphasis on material innovations, structural programming strategies, and their integration into the field of soft robotics. The review synthesizes findings from studies between 1965–2025, focusing on stimuli-responsive materials such as shape-memory polymers (SMPs), hydrogels, liquid crystal elastomers (LCEs), and liquid metal composites (e.g., EGaln-SLMNPs) that enable dynamic shape transformations under thermal, optical, magnetic, or pH stimuli. It explores advanced design methodologies, including bio-inspired structures (e.g., limpet-inspired actuators, Mimosa-like robots), multi-material systems, and computational models (FEA, multi-physics simulations) for optimizing adaptive behaviours. 
 
-**Skills Learned:**
-- Systematic literature review methodology (SIGMA 2020 protocol)
-- Understanding of 4D printing principles and stimuli-responsive materials
-- Knowledge of material programming and structural morphing in soft robotics
-- Analytical comparison of design, simulation, and fabrication frameworks
-- Scientific writing, data extraction, and critical synthesis of technical literature`,
+The review highlights applications in soft robotics, such as self-deploying grippers, crawling/swimming robots, and biomedical devices, while addressing challenges in scalability, multi-material integration, and cyclic durability. Key innovations discussed include hybrid liquid metal-hydrogel actuators, biodegradable stiffness-tunable composites, and AI-driven design frameworks. Concluding with future directions, advocating for AI/quantum computing-enhanced modelling, sustainable materials, and hybrid manufacturing techniques to advance functional 4D-printed soft robotic systems. 
+
+THE PAPER IS IN THE PROCESS OF PUBLICATION, THE LINK WILL BE UPDATED SOON`,
     link: ' ',
   },
+
   {
     id: 4,
     title: "A Systematic Literature Review of RCM-Based MIS Robot Mechanisms",
@@ -85,18 +125,21 @@ The review consolidated emerging research trends in stimuli-responsive materials
     description:
       "This review systematically examined various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches.",
     status: "Review",
-    skills: ["Medical Robotics", "RCM Mechanisms", "Kinematics", "Literature Review", "Control Systems"],
-    fullDescription: `**Description:**
-This review systematically examined various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches, and workspace analyses. The study compared forward/inverse kinematic formulations, RCM enforcement techniques, and simulation frameworks used for validating RCM stability.
+    skills: ["Medical Robotics", "RCM Mechanisms", "Robot Kinematics", "Inverse Kinematics", "Workspace Analysis", "Dynamic Modelling", "Robot Control Systems", "Literature Review"],
+    fullDescription: `DESCRIPTION:
 
-The review also summarized the evolution of control architectures and actuation systems across different MIS robot designs, highlighting performance metrics and application domains.
+This review systematically examines various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches, and workspace analyses. The study compares forward/inverse kinematic formulations, RCM enforcement techniques, and simulation frameworks used for validating RCM stability.
 
-**Skills Learned:**
+The review also summarizes the evolution of control architectures and actuation systems across different MIS robot designs, highlighting performance metrics and application domains.
+
+Skills Learned:
 - In-depth understanding of RCM-based surgical robot architectures
 - Kinematic, dynamic, and workspace modeling methodologies
 - Knowledge of control system design for constrained robotic systems
 - Experience in comparative evaluation and synthesis of research literature
-- Technical writing and scientific documentation of robotic mechanisms`,
+- Technical writing and scientific documentation of robotic mechanisms
+
+THE PAPER IS UNDER PROCESS OF PUBLISHING, LINK WILL BE UPDATED SOON`,
     link: ' ',
   },
   {
@@ -104,20 +147,20 @@ The review also summarized the evolution of control architectures and actuation 
     title: "Design of Soft Robots: A Review",
     images: ["/Rimg/R5img1.png","/Rimg/R5img2.png"],
     description:
-      "This extensive review covered over 380 research papers (1961–2025) to chart the evolution of soft robotics design, focusing on actuators, sensors, control paradigms, and fabrication technologies.",
+      "Soft robots, characterized by their compliance and flexibility, have gathered significant attention in recent years for their potential applications across diverse fields and for revolutionizing conventional robotics by mimicking natural organisms.",
     status: "Review",
-    skills: ["Soft Robotics", "Actuators", "Sensors", "AI Control Models", "Materials Science", "Fabrication"],
-    fullDescription: `**Description:**
-This extensive review covered over 380 research papers (1961–2025) to chart the evolution of soft robotics design, focusing on actuators, sensors, control paradigms, and fabrication technologies. The paper explored material innovations such as shape-memory polymers, hydrogels, and liquid crystal elastomers, along with advanced manufacturing techniques like 3D/4D printing and origami-inspired fabrication.
+    skills: ["Soft Robotics", "Soft Actuators", "Soft Sensors", "Deep Learning Control Model","DL/RL/DRL/SL/SSL/USL", "Materials Science", "AM Fabrication"],
+    fullDescription: `DESCRIPTION:
 
-Control methodologies including reinforcement learning and physics-informed AI were analyzed for handling soft systems' nonlinearities. The study concluded with identified challenges and future directions in bioinspired design, adaptive sensing, and AI-based control for next-generation soft robots.
+Soft robots, characterized by their compliance and flexibility, have gathered significant attention in recent years for their potential applications across diverse fields and for revolutionizing conventional robotics by mimicking natural organisms. 
 
-**Skills Learned:**
-- Extensive literature analysis and synthesis (380+ sources)
-- Understanding of soft actuator and sensor technologies
-- Knowledge of smart materials and advanced fabrication techniques
-- Familiarity with AI-driven control approaches for nonlinear soft systems
-- Experience in trend identification, technical summarization, and future research mapping`,
+The current work presents an exhaustive review of the evolution of soft robotics, focusing on design methodologies, actuation, sensing, kinematics, dynamics, and control procedures. The mentioned robots are classified according to their use in various fields such as healthcare, bionic underwater exploration, human-robot interaction, etc. In addition, they are known for their enhanced dexterity, safety, and interaction ability. 
+
+The realization of soft robots has been greatly influenced by the progress made in hydrogels, shape-memory alloys, self-healing polymers, and elastomers. These material advancements have brought significant improvements in the mentioned fields. Further, this paper aims to investigate the use of bio-inspired patterns and mechanisms to enhance the functionality and adaptability of soft robots in various environments. Furthermore, a comparison of soft robots has been presented that is based on their control schemes. It offered a valuable perspective on the effectiveness, productivity, and feasibility of various soft robotic methodologies. 
+
+Moreover, 250+ papers have been reviewed to summarize the developments over the years, from 1961 to 2024, in this domain to identify the possible research gaps and propose near-future research directions. The authors believe that the present work will act as a beneficial information resource for engineers/scientists working in the area of soft robotics. Finally, based on the work presented in this manuscript, concluding remarks are drawn.
+
+THE PAPER IS IN THE PROCESS OF PUBLICATION, LINK WILL BE UPDATED SOON`,
     link: ' ',
   },
 ];
