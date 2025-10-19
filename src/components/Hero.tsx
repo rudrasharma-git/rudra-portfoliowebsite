@@ -38,9 +38,7 @@ const Hero = () => {
               that blend machine learning, robotic control, and automation. With
               multidisciplinary knowledge, I provide solutions with urgency,
               efficiency, and creativity. */}
-              Designing Intelligent, Adaptive Systems<br/>
-              Transforming the future of Problem Solving<br/>
-              Integrating business values and professional ethics 
+              CRAFTING INTELLIGENT SYSTEMS  
             </p>
 
             {/* CTA */}

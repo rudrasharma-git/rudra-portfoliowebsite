@@ -8,7 +8,7 @@ const Footer = () => {
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
               RUDRA SHARMA
             </h3>
-            <p className="text-sm text-muted-foreground mt-2 tracking-wider">
+            <p className="text-sm text-muted-foreground mt-2 tracking-wider text-center md:text-left">
               BASED IN DELHI, INDIA
             </p>
           </div>
