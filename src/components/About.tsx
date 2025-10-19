@@ -33,7 +33,7 @@ Equipped with multidisciplinary expertise and guided by strong business ethics a
                   University School of Automation & Robotics, GGSIPU EDC, Shahdara, Delhi
                 </h4>
                 <p className="text-base text-card-foreground/80 mb-2">
-                  Automation and Robotics • 2021 - 2025
+                  Automation and Robotics • 2021 - 2025 • CGPA: 8.818
                 </p>
                 <p className="text-base text-card-foreground mb-3">
                   Key Curriculum:
