@@ -74,7 +74,7 @@ const Connect = () => {
           {/* Quote */}
           <div className="pt-12">
             <p className="text-xl md:text-4xl font-light italic text-card-foreground/80 tracking-wide uppercase">
-              "The goal is not just intelligent machines, but machines that make humanity better."
+              "The goal is not just intelligent systems, but systems that make humanity better."
             </p>
           </div>
         </div>
