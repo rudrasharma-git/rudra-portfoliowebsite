@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
     images: ["/Pimg/P8img1.png", "/Pimg/P8img2.png", "/Pimg/P8img3.png"],
     description:
       "This project focuses on the design and analysis of a 3-segment modular continuum robot — a flexible, tendon-driven robotic manipulator designed for low-cost, open-source research applications such as minimally invasive procedures and advanced robotic experimentation. The robot’s design emphasizes simplicity, affordability, and adaptability, allowing researchers to easily fabricate and modify it using accessible off-the-shelf components and 3D printing technologies.",
-    skills: ["CAD Design", "FEA", "MATLAB", "C/C++", "Arduino", "Kinematic Analysis", "PWM Control", "MATLAB/Simulink"],
+    skills: ["CAD Design", "FEA", "C/C++", "Arduino", "Kinematic Analysis", "PWM Control", "MATLAB/Simulink"],
     fullDescription: `DESCRIPTION:
     
     This project focuses on the design and analysis of a 3-segment modular continuum robot — a flexible, tendon-driven robotic manipulator designed for low-cost, open-source research applications such as minimally invasive procedures and advanced robotic experimentation. The robot’s design emphasizes simplicity, affordability, and adaptability, allowing researchers to easily fabricate and modify it using accessible off-the-shelf components and 3D printing technologies.

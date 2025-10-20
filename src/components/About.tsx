@@ -15,7 +15,7 @@ const About = () => {
             ABOUT ME
           </h3>
           <p className="text-lg leading-relaxed text-card-foreground max-w-6xl text-justify">
-Equipped with multidisciplinary expertise and guided by strong business ethics and professional values, I approach every task with a sense of urgency and purpose. I focus not only on achieving exceptional results but also on fostering a positive and efficient work environment. Adaptable and proactive, I’m ready to take the lead when needed, driving teams and projects forward with clarity, collaboration, and commitment to continuous improvement.          </p>
+Equipped with multidisciplinary knowledge, driven by strong business ethics and professional values, I approach every task with a sense of urgency and purpose. I focus not only on achieving exceptional results but also on fostering a positive and efficient work environment. Adaptable and proactive, I’m ready to take the lead when needed, driving teams and projects forward with clarity, collaboration, and commitment to continuous improvement.          </p>
         </div>
 
         {/* Education and Experience - Horizontal Layout */}
@@ -30,7 +30,7 @@ Equipped with multidisciplinary expertise and guided by strong business ethics a
               {/* College */}
               <div className="border-l-2 border-secondary pl-6">
                 <h4 className="text-lg font-semibold mb-2">
-                  University School of Automation & Robotics, GGSIPU EDC, Shahdara, Delhi
+                  University School of Automation & Robotics, GGSIPU EDC, Shahdara, Delhi - B.Tech
                 </h4>
                 <p className="text-base text-card-foreground/80 mb-2">
                   Automation and Robotics • 2021 - 2025 • CGPA: 8.818
@@ -43,7 +43,9 @@ Equipped with multidisciplinary expertise and guided by strong business ethics a
                   <li>Mechanical Design</li>
                   <li>PLC & SCADA</li>
                   <li>Vision Systems (ROS)</li>
-                  <li>Computer Architecture</li>
+                  <li>AS/RS</li>
+                  <li>Warehouse Automation</li>
+                  <li>Automated Guided Vehichles</li>
                 </ul>
               </div>
 
@@ -81,7 +83,7 @@ Equipped with multidisciplinary expertise and guided by strong business ethics a
                   Robotic Process Automation Trainee
                 </h4>
                 <p className="text-base text-card-foreground/80 mb-3">
-                  AARGEE Automation and Control, Mohali • 1 Month
+                  AARGEE Automation and Control, Mohali • 6 Weeks
                 </p>
                 <ul className="text-base text-card-foreground space-y-2 list-disc list-inside">
                   <li>PLC programming</li>

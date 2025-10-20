@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { researchData } from "@/data/researchData";
 import { ArrowRight } from "lucide-react";
 
@@ -10,6 +10,11 @@ const ResearchDetail = () => {
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
 
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const research = researchData.find((r) => r.id === Number(id));
 
   if (!research) {
@@ -40,7 +45,13 @@ const ResearchDetail = () => {
         <div className="container mx-auto px-6 py-4">
           <Button
             variant="ghost"
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/"); // go home first
+              setTimeout(() => {
+                const section = document.getElementById("research");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }, 300);
+            }}
             className="gap-2"
           >
             <ArrowLeft size={20} />
@@ -91,11 +102,10 @@ const ResearchDetail = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveImage(idx)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      idx === activeImage
+                    className={`w-2 h-2 rounded-full transition-all ${idx === activeImage
                         ? "bg-secondary w-8"
                         : "bg-primary-foreground/50"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
@@ -130,7 +140,7 @@ const ResearchDetail = () => {
         {/* link to project */}
         <div className="pt-4">
           <div className="inline-flex items-center gap-3 group">
-            
+
             <ArrowRight
               size={20}
               className="group-hover:translate-x-2 mb-6 transition-transform duration-300"

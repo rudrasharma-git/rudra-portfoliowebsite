@@ -1,10 +1,11 @@
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-card text-card-foreground px-6 pt-20"
+      className="min-h-screen flex items-center justify-center bg-card text-card-foreground px-6 pt-20 pb-10"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -21,6 +22,7 @@ const Hero = () => {
             </div>
           </div>
 
+
           {/* Text Content */}
           <div className="order-2 md:order-1 space-y-6 animate-slide-in-left">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none">
@@ -30,15 +32,15 @@ const Hero = () => {
             </h1>
 
             <h2 className="text-xl md:text-2xl font-medium tracking-wide text-foreground/70">
-              ROBOTICS AND AI ENGINEER
+              ROBOTICS & AI ENGINEER
             </h2>
 
-            <p className="text-sm md:text-base tracking-wide leading-relaxed text-foreground/80 max-w-xl uppercase text-justify">
+            <p className="text-sm md:text-base tracking-wide leading-relaxed text-foreground/80 max-w-xl uppercase text-justify font-semibold">
               {/* I am a Robotics and AI engineer, and I create intelligent systems
               that blend machine learning, robotic control, and automation. With
               multidisciplinary knowledge, I provide solutions with urgency,
               efficiency, and creativity. */}
-              CRAFTING INTELLIGENT SYSTEMS  
+              CRAFTING INTELLIGENT SYSTEMS
             </p>
 
             {/* CTA */}
@@ -47,16 +49,22 @@ const Hero = () => {
                 {/* <span className="text-sm font-semibold tracking-wider">
                   AVAILABLE FOR WORK
                 </span> */}
-                <ArrowRight
+                {/* <ArrowRight
                   size={20}
                   className="group-hover:translate-x-2 transition-transform duration-300"
-                />
-                <a
-                  href="mailto:rudrasharma1759@gmail.com"
-                  className="text-lg font-medium text-secondary hover:underline"
+                /> */}
+                <Button
+                  asChild
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 py-2 text-lg"
                 >
-                  GET IN TOUCH
-                </a>
+                  <a
+                    href="https://drive.google.com/file/d/1Md6TdI1OSdo19Qhgsm-wRTKQAI2k_G16/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download CV
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

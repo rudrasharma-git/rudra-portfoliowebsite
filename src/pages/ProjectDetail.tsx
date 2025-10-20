@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projectsData } from "@/data/projectsData";
 import { ArrowRight } from "lucide-react";
 
@@ -9,6 +9,11 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
+
+// Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const project = projectsData.find((p) => p.id === Number(id));
 
@@ -39,8 +44,13 @@ const ProjectDetail = () => {
       <div className="sticky top-0 z-50 bg-card/95 backdrop-blur-md shadow-md">
         <div className="container mx-auto px-6 py-4">
           <Button
-            variant="ghost"
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/"); // go home first
+              setTimeout(() => {
+                const section = document.getElementById("projects");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }, 300);
+            }}
             className="gap-2"
           >
             <ArrowLeft size={20} />
