@@ -58,7 +58,7 @@ const Hero = () => {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 py-2 text-lg"
                 >
                   <a
-                    href="https://drive.google.com/file/d/1Md6TdI1OSdo19Qhgsm-wRTKQAI2k_G16/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1pGADlJ4PB5R54Pz1vrQFpRcGVJNUDeML/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
