@@ -14,7 +14,7 @@ const About = () => {
           <h3 className="text-2xl font-bold mb-6 text-secondary">
             ABOUT ME
           </h3>
-          <p className="text-lg leading-relaxed text-card-foreground max-w-6xl text-justify">
+          <p className="text-md md:text-lg leading-relaxed text-card-foreground max-w-6xl text-justify">
 Equipped with multidisciplinary knowledge, driven by strong business ethics and professional values, I approach every task with a sense of urgency and purpose. I focus not only on achieving exceptional results but also on fostering a positive and efficient work environment. Adaptable and proactive, I’m ready to take the lead when needed, driving teams and projects forward with clarity, collaboration, and commitment to continuous improvement.          </p>
         </div>
 
