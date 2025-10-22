@@ -19,7 +19,9 @@ export const researchData: ResearchItem[] = [
     status: "Research",
     skills: ["Robot Kinematics", "Robot Dynamics", "MATLAB", "SolidWorks", "Precision Design", "ADAMS", "Euler-Lagrange Model", "RCM Analysis", "Surgical Robotics"],
     fullDescription: 
-`DESCRIPTION: This research focuses on the dynamic modeling of a double-parallelogram Remote Center of Motion (RCM) mechanism used in minimally invasive surgical (MIS) robots. The study began with the development of a comprehensive kinematic model to derive the constraint equations governing the active joint parameters.
+`DESCRIPTION: 
+
+This research focuses on the dynamic modeling of a double-parallelogram Remote Center of Motion (RCM) mechanism used in minimally invasive surgical (MIS) robots. The study began with the development of a comprehensive kinematic model to derive the constraint equations governing the active joint parameters.
 
 A key novelty of this work lies in the consideration of link length inequalities arising from manufacturing tolerances, a factor often overlooked in prior studies but highly relevant to real-world implementations. Additionally, unlike most research that focuses solely on end-effector dynamics, this work extends the analysis to the RCM point—the critical pivot about which the surgical tool operates—thereby offering a more physically accurate insight into system behavior.
 
@@ -41,7 +43,11 @@ link: 'https://github.com/rudrasharma-git/RCM-Design-Kinematic-Dynamics-Simulati
     status: "Research",
     skills: ["Deep RL", "Soft Robotics", "DDPG", "PPO", "SOFA", "MuJoCo", "PyBullet", "ROS2", "PyTorch"],
     fullDescription: 
-`1. Background
+`LINK IS NOT ACTIVE, SINCE THE RESEARCH IS IN PROGRESS.
+
+DESCRIPTION:
+
+1. Background
 
 Soft continuum robots are transforming fields like minimally invasive surgery and human-robot collaboration due to their flexibility and safety. However, their nonlinear dynamics and difficult-to-model deformations make real-time control extremely challenging. This project integrates advanced sensing, adaptive control, and reinforcement learning to overcome those limitations, enabling accurate and intelligent motion control for next-generation soft robots.
 
@@ -97,7 +103,7 @@ The goal is to develop a hybrid adaptive reinforcement learning (RL) controller 
   
   THE RESEARCH IS IN PROGRESS AND WILL BE UPDATED SOON. IF YOU WANT TO KNOW MORE ABOUT THIS RESEARCH OR COLLABORATE, FEEL FREE TO REACH OUT TO ME.`,
 
-    link:'https://www.linkedin.com/in/rudra-sharma-3045992b1/' ,
+    link:'' ,
   },
 
   {
@@ -108,13 +114,15 @@ The goal is to develop a hybrid adaptive reinforcement learning (RL) controller 
       "This work presents a systematic review of recent advancements in 4D printing, with a specific emphasis on material innovations, structural programming strategies, and their integration into the field of soft robotics. The review synthesizes findings from studies between 1965–2025, focusing on stimuli-responsive materials such as shape-memory polymers (SMPs), hydrogels, liquid crystal elastomers (LCEs), and liquid metal composites (e.g., EGaln-SLMNPs) that enable dynamic shape transformations under thermal, optical, magnetic, or pH stimuli. It explores advanced design methodologies, including bio-inspired structures (e.g., limpet-inspired actuators, Mimosa-like robots), multi-material systems, and computational models (FEA, multi-physics simulations) for optimizing adaptive behaviours. ",
     status: "Review",
     skills: ["4D Printing", "Soft Robotics","FEA", "Smart Materials", "Systematic Literature Review", "Sensors & Actuators"],
-    fullDescription: `DESCRIPTION:
+    fullDescription: `THE PAPER IS IN THE PROCESS OF PUBLICATION, THE LINK WILL BE UPDATED SOON
+    
+    DESCRIPTION:
 
 This work presents a systematic review of recent advancements in 4D printing, with a specific emphasis on material innovations, structural programming strategies, and their integration into the field of soft robotics. The review synthesizes findings from studies between 1965–2025, focusing on stimuli-responsive materials such as shape-memory polymers (SMPs), hydrogels, liquid crystal elastomers (LCEs), and liquid metal composites (e.g., EGaln-SLMNPs) that enable dynamic shape transformations under thermal, optical, magnetic, or pH stimuli. It explores advanced design methodologies, including bio-inspired structures (e.g., limpet-inspired actuators, Mimosa-like robots), multi-material systems, and computational models (FEA, multi-physics simulations) for optimizing adaptive behaviours. 
 
 The review highlights applications in soft robotics, such as self-deploying grippers, crawling/swimming robots, and biomedical devices, while addressing challenges in scalability, multi-material integration, and cyclic durability. Key innovations discussed include hybrid liquid metal-hydrogel actuators, biodegradable stiffness-tunable composites, and AI-driven design frameworks. Concluding with future directions, advocating for AI/quantum computing-enhanced modelling, sustainable materials, and hybrid manufacturing techniques to advance functional 4D-printed soft robotic systems. 
 
-THE PAPER IS IN THE PROCESS OF PUBLICATION, THE LINK WILL BE UPDATED SOON`,
+`,
     link: ' ',
   },
 
@@ -126,7 +134,9 @@ THE PAPER IS IN THE PROCESS OF PUBLICATION, THE LINK WILL BE UPDATED SOON`,
       "This review systematically examined various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches.",
     status: "Review",
     skills: ["Medical Robotics", "RCM Mechanisms", "Robot Kinematics", "Inverse Kinematics", "Workspace Analysis", "Dynamic Modelling", "Robot Control Systems", "Literature Review"],
-    fullDescription: `DESCRIPTION:
+    fullDescription: `THE PAPER IS UNDER PROCESS OF PUBLISHING, LINK WILL BE UPDATED SOON
+    
+    DESCRIPTION:
 
 This review systematically examines various RCM-based mechanisms developed for minimally invasive surgical robots, covering their geometric designs, control strategies, kinematic and dynamic modeling approaches, and workspace analyses. The study compares forward/inverse kinematic formulations, RCM enforcement techniques, and simulation frameworks used for validating RCM stability.
 
@@ -139,7 +149,7 @@ Skills Learned:
 - Experience in comparative evaluation and synthesis of research literature
 - Technical writing and scientific documentation of robotic mechanisms
 
-THE PAPER IS UNDER PROCESS OF PUBLISHING, LINK WILL BE UPDATED SOON`,
+`,
     link: ' ',
   },
   {
@@ -150,7 +160,9 @@ THE PAPER IS UNDER PROCESS OF PUBLISHING, LINK WILL BE UPDATED SOON`,
       "Soft robots, characterized by their compliance and flexibility, have gathered significant attention in recent years for their potential applications across diverse fields and for revolutionizing conventional robotics by mimicking natural organisms.",
     status: "Review",
     skills: ["Soft Robotics", "Soft Actuators", "Soft Sensors", "Deep Learning Control Model","DL/RL/DRL/SL/SSL/USL", "Materials Science", "AM Fabrication"],
-    fullDescription: `DESCRIPTION:
+    fullDescription: `THE PAPER IS IN THE PROCESS OF PUBLICATION, LINK WILL BE UPDATED SOON
+    
+    DESCRIPTION:
 
 Soft robots, characterized by their compliance and flexibility, have gathered significant attention in recent years for their potential applications across diverse fields and for revolutionizing conventional robotics by mimicking natural organisms. 
 
@@ -160,7 +172,7 @@ The realization of soft robots has been greatly influenced by the progress made 
 
 Moreover, 250+ papers have been reviewed to summarize the developments over the years, from 1961 to 2024, in this domain to identify the possible research gaps and propose near-future research directions. The authors believe that the present work will act as a beneficial information resource for engineers/scientists working in the area of soft robotics. Finally, based on the work presented in this manuscript, concluding remarks are drawn.
 
-THE PAPER IS IN THE PROCESS OF PUBLICATION, LINK WILL BE UPDATED SOON`,
+`,
     link: ' ',
   },
 ];

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -22,6 +23,7 @@ const Hero = () => {
             </div>
           </div>
 
+          {/*  */}
 
           {/* Text Content */}
           <div className="order-2 md:order-1 space-y-6 animate-slide-in-left">
@@ -58,7 +60,7 @@ const Hero = () => {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 py-2 text-lg"
                 >
                   <a
-                    href="https://drive.google.com/file/d/1pGADlJ4PB5R54Pz1vrQFpRcGVJNUDeML/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1pGADlJ4PB5R54Pz1vrQFpRcGVJNUDeML/view?usp=sharingq"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -66,6 +68,38 @@ const Hero = () => {
                   </a>
                 </Button>
               </div>
+            </div>
+
+            <div className="flex gap-6 justify-right pt-4 ">
+              <a
+                href="https://www.linkedin.com/in/rudra-sharma-3045992b1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="LinkedIn Profile"
+              >
+                <div className="flex items-right gap-3 text-secondary hover:text-secondary/80 transition-colors border-2 border-secondary rounded-full px-2 py-1.5 hover:bg-secondary/10">
+                  <Linkedin size={32} />
+                  <span className="text-lg font-medium group-hover:underline">
+                    LinkedIn
+                  </span>
+                </div>
+              </a>
+
+              <a
+                href="https://github.com/rudrasharma-git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="GitHub Profile"
+              >
+                <div className="flex items-right gap-3 text-secondary hover:text-secondary/80 transition-colors border-2 border-secondary rounded-full px-2 py-1.5 hover:bg-secondary/10">
+                  <Github size={32} />
+                  <span className="text-lg font-medium group-hover:underline">
+                    GitHub
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

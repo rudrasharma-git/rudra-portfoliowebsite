@@ -130,16 +130,8 @@ const ResearchDetail = () => {
           </div>
         </div>
 
-        {/* Full Description */}
-        <div className="prose prose-lg max-w-none">
-          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
-            {research.fullDescription}
-          </div>
-        </div>
-
         {/* link to project */}
-        <div className="pt-4">
-          <div className="inline-flex items-center gap-3 group">
+        <div className="inline-flex items-center gap-3 group">
 
             <ArrowRight
               size={20}
@@ -152,9 +144,20 @@ const ResearchDetail = () => {
               LINK
             </a>
           </div>
+
+        {/* Full Description */}
+        <div className="prose prose-lg max-w-none">
+          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
+            {research.fullDescription}
+          </div>
+        </div>
+
+        
+        {/* <div className="pt-4"> */}
+          
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

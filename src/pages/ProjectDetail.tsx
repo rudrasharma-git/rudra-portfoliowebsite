@@ -122,15 +122,8 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Full Description */}
-        <div className="prose prose-lg max-w-none">
-          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
-            {project.fullDescription}
-          </div>
-        </div>
-
         {/* link to project */}
-        <div className="pt-4">
+        {/* <div className="pt-4"> */}
           <div className="inline-flex items-center gap-3 group">
 
             <ArrowRight
@@ -144,7 +137,16 @@ const ProjectDetail = () => {
               LINK
             </a>
           </div>
+        {/* </div> */}
+
+        {/* Full Description */}
+        <div className="prose prose-lg max-w-none">
+          <div className="whitespace-pre-line text-foreground/80 leading-relaxed text-justify">
+            {project.fullDescription}
+          </div>
         </div>
+
+        
       </div>
     </div>);
 };
